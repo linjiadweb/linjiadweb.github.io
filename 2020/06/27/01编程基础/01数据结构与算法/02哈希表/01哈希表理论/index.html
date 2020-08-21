@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		哈希表理论 | 
+	 
+	linjiad技术博客
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="这个人很懒什么也没写" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">linjiad技术博客</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/linjiad" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/linjiad" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01编程基础
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01数据结构与算法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/00%E5%AF%BC%E8%AE%BA/">
+										00导论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01线性结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/01%E6%95%B0%E7%BB%84/">
+										01数组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/02%E6%A0%88/">
+										02栈
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/03%E9%98%9F%E5%88%97/">
+										03队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/04%E9%93%BE%E8%A1%A8/">
+										04链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/05%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">
+										05双向链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/06%E9%9B%86%E5%90%88/">
+										06集合
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/07%E5%AD%97%E5%85%B8/">
+										07字典
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02哈希表
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2020/06/27/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/02%E5%93%88%E5%B8%8C%E8%A1%A8/01%E5%93%88%E5%B8%8C%E8%A1%A8%E7%90%86%E8%AE%BA/">
+										01哈希表理论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/02%E5%93%88%E5%B8%8C%E8%A1%A8/02%E5%93%88%E5%B8%8C%E8%A1%A8%E5%AE%9E%E7%8E%B0/">
+										02哈希表实现
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03树
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/01%E6%A0%91%E7%BB%93%E6%9E%84/">
+										01树结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/02%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
+										02二叉搜索树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/03%E7%BA%A2%E9%BB%91%E6%A0%91/">
+										03红黑树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/04B%E5%92%8CB+%E6%A0%91/">
+										04B和B+树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/05%E5%9B%BE/">
+										05图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04算法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/04%E7%AE%97%E6%B3%95/01%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F/">
+										01简单排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/04%E7%AE%97%E6%B3%95/02%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F/">
+										02高级排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02设计模式
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01基础工作
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01%E5%9F%BA%E7%A1%80%E5%B7%A5%E4%BD%9C/01%E5%AF%B9%E8%B1%A1/">
+										01对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01%E5%9F%BA%E7%A1%80%E5%B7%A5%E4%BD%9C/02%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+										02设计原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02设计模式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										01工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										02抽象工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/03%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+										03单例模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/04%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										04适配器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/05%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										05装饰器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/06%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/">
+										06代理模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/07%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/">
+										07外观模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/08%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										08观察者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/09%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										09迭代器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/10%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/">
+										10状态模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/11%E5%85%B6%E4%BB%96%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+										11其他设计模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02web
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										ThreeJS
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01入门
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/01HelloWorld/">
+										01HelloWorld
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/02%E6%97%8B%E8%BD%AC%E5%8A%A8%E7%94%BB/">
+										02旋转动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/03%E9%BC%A0%E6%A0%87%E6%93%8D%E4%BD%9C/">
+										03鼠标操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/04%E6%8F%92%E5%85%A5%E5%A4%9A%E4%B8%AA%E5%87%A0%E4%BD%95%E4%BD%93/">
+										04插入多个几何体
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/05%E6%9D%90%E8%B4%A8/">
+										05材质
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/06%E5%85%89%E7%85%A7/">
+										06光照
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02顶点,几何体结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/01%E9%A1%B6%E7%82%B9%E4%BD%8D%E7%BD%AE/">
+										01顶点位置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/02%E9%A1%B6%E7%82%B9%E9%A2%9C%E8%89%B2/">
+										02顶点颜色
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/03%E9%A1%B6%E7%82%B9%E6%B3%95%E5%90%91%E9%87%8F/">
+										03顶点法向量
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/04%E7%B4%A2%E5%BC%95%E5%A4%8D%E7%94%A8%E9%A1%B6%E7%82%B9%E6%95%B0%E6%8D%AE/">
+										04索引复用顶点数据
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/05Geometry%E9%A1%B6%E7%82%B9%E4%BD%8D%E7%BD%AE%E3%80%81%E9%A1%B6%E7%82%B9%E9%A2%9C%E8%89%B2/">
+										05Geometry顶点位置、顶点颜色
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/06Face3%E5%AF%B9%E8%B1%A1%E5%AE%9A%E4%B9%89Geometry/">
+										06Face3对象定义Geometry
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/07%E5%87%A0%E4%BD%95%E4%BD%93%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%95%B0%E6%8D%AE/">
+										07几何体对象的数据
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/08%E5%87%A0%E4%BD%95%E4%BD%93%E6%97%8B%E8%BD%AC,%E7%BC%A9%E6%94%BE,%E5%B9%B3%E7%A7%BB%E5%8F%98%E6%8D%A2/">
+										08几何体旋转,缩放,平移变换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03材质对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/03%E6%9D%90%E8%B4%A8%E5%AF%B9%E8%B1%A1/01%E5%B8%B8%E7%94%A8%E6%9D%90%E8%B4%A8%E5%AF%B9%E8%B1%A1/">
+										01常用材质对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04点线面模型对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/04%E7%82%B9%E7%BA%BF%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1/01%E7%82%B9%E3%80%81%E7%BA%BF%E3%80%81%E7%BD%91%E6%A0%BC%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D/">
+										01点、线、网格模型介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/04%E7%82%B9%E7%BA%BF%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1/02%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1%E6%97%8B%E8%BD%AC%E5%B9%B3%E7%A7%BB%E7%BC%A9%E6%94%BE%E5%8F%98%E6%8D%A2/">
+										02模型对象旋转平移缩放变换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/04%E7%82%B9%E7%BA%BF%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1/03%E5%85%8B%E9%9A%86.clone()%E5%92%8C%E5%A4%8D%E5%88%B6.copy()/">
+										03克隆.clone()和复制.copy()
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05光源对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/02/02web/ThreeJS/05%E5%85%89%E6%BA%90%E5%AF%B9%E8%B1%A1/01%E5%B8%B8%E8%A7%81%E5%85%89%E6%BA%90/">
+										01常见光源
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/08/02web/ThreeJS/05%E5%85%89%E6%BA%90%E5%AF%B9%E8%B1%A1/02%E6%8A%95%E5%BD%B1/">
+										02投影
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/08/02web/ThreeJS/05%E5%85%89%E6%BA%90%E5%AF%B9%E8%B1%A1/03%E5%9F%BA%E7%B1%BBLight%E5%92%8CObject3D/">
+										03基类Light和Object3D
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06层级模型
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/09/02web/ThreeJS/06%E5%B1%82%E7%BA%A7%E6%A8%A1%E5%9E%8B/01%E7%BB%84%E5%AF%B9%E8%B1%A1Group/">
+										01组对象Group
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/09/02web/ThreeJS/06%E5%B1%82%E7%BA%A7%E6%A8%A1%E5%9E%8B/02%E8%8A%82%E7%82%B9%E5%91%BD%E5%90%8D.%E6%9F%A5%E6%89%BE.%E9%81%8D%E5%8E%86/">
+										02节点命名.查找.遍历
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/10/02web/ThreeJS/06%E5%B1%82%E7%BA%A7%E6%A8%A1%E5%9E%8B/03%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87/">
+										03世界坐标
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07三维几何体建模
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/10/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/01%E5%87%A0%E4%BD%95%E4%BD%93%E5%92%8C%E6%9B%B2%E7%BA%BF/">
+										01几何体和曲线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/10/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/02%E7%BB%98%E5%88%B6%E5%9C%86%E5%BC%A7/">
+										02绘制圆弧
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/03%E6%A0%B7%E6%9D%A1%E6%9B%B2%E7%BA%BF,%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF/">
+										03样条曲线,贝塞尔曲线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/04%E5%A4%9A%E4%B8%AA%E7%BA%BF%E6%9D%A1%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF/">
+										04多个线条组合曲线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/05%E6%9B%B2%E7%BA%BF%E8%B7%AF%E5%BE%84%E7%AE%A1%E9%81%93/">
+										05曲线路径管道
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/06%E6%97%8B%E8%BD%AC%E6%88%90%E5%9E%8B/">
+										06旋转成型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/07%E8%BD%AE%E5%BB%93%E5%92%8C%E8%BD%AE%E5%BB%93%E5%A1%AB%E5%85%85/">
+										07轮廓和轮廓填充
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/08%E6%8B%89%E4%BC%B8%E6%89%AB%E6%8F%8F/">
+										08拉伸扫描
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										08纹理贴图
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/15/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/01%E5%88%9B%E5%BB%BA%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/">
+										01创建纹理贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/15/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/02UV%E6%98%A0%E5%B0%84%E5%8E%9F%E7%90%86/">
+										02UV映射原理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/15/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/03%E6%95%B0%E7%BB%84%E6%9D%90%E8%B4%A8,%E6%9D%90%E8%B4%A8%E7%B4%A2%E5%BC%95/">
+										03数组材质,材质索引
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/21/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/04%E7%BA%B9%E7%90%86%E5%AF%B9%E8%B1%A1Texture%E9%98%B5%E5%88%97,%E5%81%8F%E7%A7%BB,%E6%97%8B%E8%BD%AC/">
+										04纹理对象Texture阵列,偏移,旋转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/21/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/05%E7%94%BB%E5%B8%83%E8%A7%86%E9%A2%91%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/">
+										05画布视频纹理贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/21/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/06%E5%87%B9%E5%87%B8%E8%B4%B4%E5%9B%BE%E5%92%8C%E6%B3%95%E7%BA%BF%E8%B4%B4%E5%9B%BE/">
+										06凹凸贴图和法线贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/07%E5%85%89%E7%85%A7%E8%B4%B4%E5%9B%BE%E6%B7%BB%E5%8A%A0%E9%98%B4%E5%BD%B1/">
+										07光照贴图添加阴影
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/08%E9%AB%98%E5%85%89%E8%B4%B4%E5%9B%BE/">
+										08高光贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/09%E7%8E%AF%E5%A2%83%E8%B4%B4%E5%9B%BE/">
+										09环境贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/10%E6%95%B0%E6%8D%AE%E7%BA%B9%E7%90%86%E5%AF%B9%E8%B1%A1DataTexture/">
+										10数据纹理对象DataTexture
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09相机对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/09%E7%9B%B8%E6%9C%BA%E5%AF%B9%E8%B1%A1/01%E6%AD%A3%E6%8A%95%E5%BD%B1%E5%92%8C%E9%80%8F%E8%A7%86%E6%8A%95%E5%BD%B1%E7%9B%B8%E6%9C%BA/">
+										01正投影和透视投影相机
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/09%E7%9B%B8%E6%9C%BA%E5%AF%B9%E8%B1%A1/02%E7%AA%97%E5%8F%A3%E5%8F%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B8%B2%E6%9F%93/">
+										02窗口变化自适应渲染
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										10精灵模型,粒子系统
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/10%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B,%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F/01%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1Sprite/">
+										01精灵模型对象Sprite
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/10%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B,%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F/02%E5%9F%8E%E5%B8%82PM2.5/">
+										02城市PM2.5
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/10%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B,%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F/03%E4%B8%8B%E9%9B%A8%E5%9C%BA%E6%99%AF/">
+										03下雨场景
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										11帧动画
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/11%E5%B8%A7%E5%8A%A8%E7%94%BB/01%E7%BC%96%E8%BE%91%E5%85%B3%E9%94%AE%E5%B8%A7%E5%B9%B6%E8%A7%A3%E6%9E%90%E6%92%AD%E6%94%BE/">
+										01编辑关键帧并解析播放
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/11%E5%B8%A7%E5%8A%A8%E7%94%BB/02%E8%A7%A3%E6%9E%90%E5%A4%96%E9%83%A8%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%9A%84%E5%B8%A7%E5%8A%A8%E7%94%BB/">
+										02解析外部模型的的帧动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/23/02web/ThreeJS/11%E5%B8%A7%E5%8A%A8%E7%94%BB/03%E6%92%AD%E6%94%BE%E8%AE%BE%E7%BD%AE/">
+										03播放设置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										12骨骼,变形动画
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/01%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB%E5%8E%9F%E7%90%86/">
+										01骨骼动画原理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/02%E5%8A%A0%E8%BD%BD%E5%A4%96%E9%83%A8%E6%A8%A1%E5%9E%8B%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/">
+										02加载外部模型骨骼动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/03%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/">
+										03变形动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/04%E5%8A%A0%E8%BD%BD%E5%A4%96%E9%83%A8%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/">
+										04加载外部变形动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										13语音模块
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/13%E8%AF%AD%E9%9F%B3%E6%A8%A1%E5%9D%97/01%E9%9F%B3%E9%A2%91%E4%B8%8E%E5%9C%BA%E6%99%AF%E5%85%B3%E8%81%94/">
+										01音频与场景关联
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/13%E8%AF%AD%E9%9F%B3%E6%A8%A1%E5%9D%97/02%E9%9F%B3%E4%B9%90%E5%8F%AF%E8%A7%86%E5%8C%96/">
+										02音乐可视化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										14模型文件加载
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/01Three.js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/">
+										01Three.js数据结构导入导出
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/02stl%E6%A0%BC%E5%BC%8F%E6%A8%A1%E5%9E%8B%E5%8A%A0%E8%BD%BD/">
+										02stl格式模型加载
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/03%E5%8A%A0%E8%BD%BD.obj%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6/">
+										03加载.obj模型文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/04%E5%8A%A0%E8%BD%BDFBX%E5%B9%B6%E8%A7%A3%E6%9E%90%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/">
+										04加载FBX并解析骨骼动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/05%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88%E6%A1%88%E4%BE%8B/">
+										05在线预览案例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/06%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2/">
+										06渲染页面
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	01哈希表理论
+</h1>
+<div class="article-meta">
+	
+	<span>linjiad</span>
+	<span>2020-06-27 09:31:49</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="认识哈希表"><a href="#认识哈希表" class="headerlink" title="认识哈希表"></a>认识哈希表</h1><h2 id="哈希表特点"><a href="#哈希表特点" class="headerlink" title="哈希表特点"></a>哈希表特点</h2><ul>
+<li><p>优点</p>
+<ul>
+<li>哈希表通常是基于数组进行实现的, 但是相对于数组, 它也很多的优势</li>
+<li>可以提供非常快速的插入-删除-查找操作</li>
+<li>无论多少数据, 插入和删除值需要接近常量的时间</li>
+<li>哈希表的速度比树还要快, 基本可以瞬间查找到想要的元素</li>
+<li>哈希表相对于树来说编码要容易很多</li>
+</ul>
+</li>
+<li><p>缺点</p>
+<ul>
+<li>哈希表中的数据是没有顺序的, 所以不能以一种固定的方式(比如从小到大)来遍历其中的元素</li>
+<li>通常情况下, 哈希表中的key是不允许重复的, 不能放置相同的key, 用于保存不同的元素</li>
+</ul>
+</li>
+<li><p>总结特点</p>
+<ul>
+<li>基于数组进行实现的</li>
+<li>提供非常快速的插入，删除，查找操作</li>
+<li>无论多少数据，插入和删除是O(1)时间级</li>
+<li>key不允许重复</li>
+<li>空间利用率不高, 底层使用的是数组, 并且某些单元是没有被利用的</li>
+<li>哈希表中的元素是无序的, 不能按照固定的顺序来遍历哈希表中的元素</li>
+<li>不能快速的找出哈希表中的最大值或者最小值这些特殊的值.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>它的结构就是数组, 但是它神奇的地方在于对下标值的一种变换, 这种变换我们可以称之为哈希函数, 通过哈希函数可以获取到HashCode.</p>
+</blockquote>
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><h3 id="案例1"><a href="#案例1" class="headerlink" title="案例1"></a>案例1</h3><ul>
+<li><p>内容介绍：</p>
+<ul>
+<li>假如一家公司有1000个员工, 现在我们需要将这些员工的信息使用某种数据结构来保存起来</li>
+</ul>
+</li>
+<li><p>方案一:数组</p>
+<ul>
+<li>员工依次存入一个长度为1000的数组中. 每个员工的信息都保存在数组的某个位置上</li>
+<li>通过编号易于查找(数组的特性)</li>
+<li>通过姓名查找时消耗大(需要循环匹配判断是否相等)</li>
+<li>插入删除消耗大(需要移动插入或删除位置后面的所有元素)</li>
+</ul>
+</li>
+<li><p>方案二:链表</p>
+<ul>
+<li>链表对应插入和删除数据有一定的优势</li>
+<li>但是对于获取员工的信息, 每次都必须从头遍历到尾</li>
+</ul>
+</li>
+<li><p>思考</p>
+<ul>
+<li>这样看最终方案似乎就是数组了</li>
+<li>假如我想查看一下张三这位员工的信息, 但是我不知道张三的员工编号, 怎么办?</li>
+<li>能不能有一种办法, 让张三的名字和它的员工编号产生直接的关系呢</li>
+<li>也就是通过张三这个名字, 我就能获取到它的索引值, 而再通过索引值我就能获取到张三的信息</li>
+</ul>
+</li>
+</ul>
+<h2 id="案例2"><a href="#案例2" class="headerlink" title="案例2"></a>案例2</h2><ul>
+<li><p>内容介绍</p>
+<ul>
+<li>使用一种数据结构存储单词信息, 比如有50000个单词. 找到单词后每个单词有自己的翻译&amp;读音&amp;应用等等</li>
+</ul>
+</li>
+<li><p>方案一: 数组</p>
+<ul>
+<li>我拿到一个单词Python, 我想知道这个单词的翻译/读音/应用. 怎么可以从数组中查到这个单词的位置呢？</li>
+<li>线性查找? 50000次比较?</li>
+<li>使用数组来实现这个功能, 效率会非常非常低</li>
+</ul>
+</li>
+<li><p>方案二: 链表</p>
+<ul>
+<li>和数组面临同样的问题</li>
+</ul>
+</li>
+<li><p>思考</p>
+<ul>
+<li>如果单词转成数组的下标, 那么以后我们要查找某个单词的信息, 直接按照下标值一步即可访问到想要的元素.</li>
+</ul>
+</li>
+</ul>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><h3 id="设定编码"><a href="#设定编码" class="headerlink" title="设定编码"></a>设定编码</h3><ul>
+<li>其实计算机中有很多的编码方案就是用数字代替单词的字符.</li>
+<li>比如ASCII编码: a是97, b是98, 依次类推122代表z</li>
+<li>我们也可以设计一个自己的编码系统, 比如a是1, b是2, c是3, 依次类推, z是26. 当然我们可以加上空格用0代替, 就是27个字符(不考虑大写问题)</li>
+</ul>
+<h3 id="字母转换成数组"><a href="#字母转换成数组" class="headerlink" title="字母转换成数组"></a>字母转换成数组</h3><p>但是, 有了编码系统后, 一个单词如何转成数字呢?</p>
+<ul>
+<li><p>方案一: 数字相加</p>
+<ul>
+<li>例如单词cats转成数字: 3+1+20+19=43, 那么43就作为cats单词的下标存在数组中.</li>
+<li>比如was/tin/give/tend/moan/tick等，很多单词最终的下标可能都是43</li>
+<li>数组中一个下标值位置只能存储一个数据, 如果存入后来的数据, 必然会造成数据的覆盖.</li>
+</ul>
+</li>
+<li><p>方案二: 幂的连乘</p>
+<ul>
+<li>大于10的数字, 可以用一种幂的连乘来表示它的唯一性:比如: 7654 = 7<em>10³+6</em>10²+5*10+4</li>
+<li>单词也可以使用这种方案来表示: 比如cats = 3 * 27³ + 1 * 27² + 20 * 27 + 17 = 60337  (因为一共是26字母+0空格)</li>
+<li>得到的数字可以几乎保证它的唯一性, 不会和别的单词重复.</li>
+<li>如果一个单词是zzzzzzzzzz. 那么得到的数字超过7000000000000.<ul>
+<li>数组可以表示这么大的下标值吗</li>
+<li>而且就算能创建这么大的数组, 事实上有很多是无效的单词. 创建这么大的数组是没有意义的</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="./01.png" alt="幂的连乘"></p>
+<ul>
+<li>总结:<ul>
+<li>第一种方案(把数字相加求和)产生的数组下标太少.</li>
+<li>第二种方案(与27的幂相乘求和)产生的数组下标又太多.</li>
+</ul>
+</li>
+</ul>
+<h3 id="压缩-哈希化"><a href="#压缩-哈希化" class="headerlink" title="压缩(哈希化)"></a>压缩(哈希化)</h3><p>现在需要一种压缩方法, 把幂的连乘方案系统中得到的巨大整数范围压缩到可接受的数组范围中.</p>
+<ul>
+<li>方法<ul>
+<li>假设把从0~199的数字, 比如使用largeNumber代表, 压缩为从0到9的数字, 比如使用smallRange代表.</li>
+<li>下标值的结果: index = largeNumber % smallRange;</li>
+<li>当一个数被10整除时, 余数一定在0~9之间;</li>
+<li>比如13%10=3, 157%10=7</li>
+</ul>
+</li>
+<li>相关概念<ul>
+<li>哈希化: 将大数字转化成数组范围内下标的过程, 我们就称之为哈希化.</li>
+<li>哈希函数: 通常我们会将单词转成大数字, 大数字在进行哈希化的代码实现放在一个函数中, 这个函数我们成为哈希函数.</li>
+<li>哈希表: 最终将数据插入到的这个数组, 我们就称之为是一个哈希表</li>
+</ul>
+</li>
+</ul>
+<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><ul>
+<li>0~199的数字选取5个放在长度为10的单元格中</li>
+<li>如果我们随机选出来的是33, 82, 11, 45, 90, 那么最终它们的位置会是3-2-1-5-0, 没有发生冲突.</li>
+<li>但是如果其中有一个33, 还有一个73呢? 还是发生了冲突.</li>
+</ul>
+<h4 id="链地址法"><a href="#链地址法" class="headerlink" title="链地址法"></a>链地址法</h4><blockquote>
+<p>链地址法是一种比较常见的解决冲突的方案.(也称为拉链法)</p>
+</blockquote>
+<ul>
+<li>链地址法解决冲突的办法是每个数组单元中存储的不再是单个数据, 而是一个链条</li>
+<li>这个链条使用数组或者链表</li>
+<li>每个数组单元中存储着一个链表. 一旦发现重复, 将重复的元素插入到链表的首端或者末端即可.</li>
+<li>当查询时, 先根据哈希化后的下标值找到对应的位置, 再取出链表, 依次查询找寻找的数据.</li>
+</ul>
+<p><img src="./02.png" alt="链地址法"></p>
+<h4 id="开放地址法"><a href="#开放地址法" class="headerlink" title="开放地址法"></a>开放地址法</h4><blockquote>
+<p>开放地址法的主要工作方式是寻找空白的单元格来添加重复的数据</p>
+</blockquote>
+<p><img src="./03.png" alt="开放地址法"></p>
+<ul>
+<li>探索这个位置的方式不同, 有三种方法:<ul>
+<li>线性探测</li>
+<li>二次探测</li>
+<li>再哈希法</li>
+</ul>
+</li>
+</ul>
+<h5 id="线性探测"><a href="#线性探测" class="headerlink" title="线性探测"></a>线性探测</h5><blockquote>
+<p>线性探测非常好理解: 线性的查找空白的单元</p>
+</blockquote>
+<ul>
+<li>插入的32<ul>
+<li>经过哈希化得到的index=2, 但是在插入的时候, 发现该位置已经有了82</li>
+<li>线性探测就是从index位置+1开始一点点查找合适的位置来放置32</li>
+<li>空的位置就是合适的位置, 在我们上面的例子中就是index=3的位置, 这个时候32就会放在该位置</li>
+</ul>
+</li>
+<li>查询32<ul>
+<li>首先经过哈希化得到index=2, 比如2的位置结果和查询的数值是否相同, 相同那么就直接返回</li>
+<li>不相同呢? 线性查找, 从index位置+1开始查找和32一样的</li>
+<li>查询到空位置, 就停止. (因为查询到这里有空位置, 32之前不可能跳过空位置去其他的位置)</li>
+</ul>
+</li>
+<li>删除32<ul>
+<li>删除操作一个数据项时, 不可以将这个位置下标的内容设置为null  </li>
+<li>因为将它设置为null可能会影响我们之后查询其他操作, 所以通常删除一个位置的数据项时, 我们可以将它进行特殊处理(比如设置为-1)</li>
+<li>我们之后看到-1位置的数据项时, 就知道查询时要继续查询, 但是插入时这个位置可以放置数据.</li>
+</ul>
+</li>
+<li>带来的问题<ul>
+<li>插入22-23-24-25-26, 那么意味着下标值:2-3-4-5-6的位置都有元素. 这种一连串填充单元就叫做聚集</li>
+<li>聚集会影响哈希表的性能, 无论是插入/查询/删除都会影响</li>
+<li>比如我们插入一个32, 会发现连续的单元都不允许我们放置数据, 并且在这个过程中我们需要探索多次</li>
+</ul>
+</li>
+</ul>
+<h5 id="二次探测"><a href="#二次探测" class="headerlink" title="二次探测"></a>二次探测</h5><blockquote>
+<p>二次探测主要优化的是探测时的步长</p>
+</blockquote>
+<ul>
+<li><p>特点</p>
+<ul>
+<li>线性探测, 我们可以看成是步长为1的探测, 比如从下标值x开始, 那么线性测试就是x+1, x+2, x+3依次探测.</li>
+<li>二次探测, 对步长做了优化, 比如从下标值x开始, x+1², x+2², x+3².</li>
+<li>这样就可以一次性探测比较常的距离, 比避免那些聚集带来的影响</li>
+</ul>
+</li>
+<li><p>带来的问题</p>
+<ul>
+<li>二次探测依然存在问题, 比如我们连续插入的是32-112-82-2-192, 那么它们依次累加的时候步长的相同的</li>
+<li>这种情况下会造成步长不一的一种聚集. 还是会影响效率.</li>
+<li>怎么根本解决这个问题呢? ——让每个人的步长不一样！</li>
+</ul>
+</li>
+</ul>
+<h5 id="再哈希法"><a href="#再哈希法" class="headerlink" title="再哈希法"></a>再哈希法</h5><blockquote>
+<p>把关键字用另外一个哈希函数, 再做一次哈希化, 用这次哈希化的结果作为步长</p>
+</blockquote>
+<ul>
+<li>特点：<ul>
+<li>和第一个哈希函数不同. (不要再使用上一次的哈希函数了, 不然结果还是原来的位置)</li>
+<li>不能输出为0(否则, 将没有步长. 每次探测都是原地踏步, 算法就进入了死循环)</li>
+</ul>
+</li>
+<li>公式<ul>
+<li>stepSize = constant - (key - constant)</li>
+<li>其中constant是质数, 且小于数组的容量.</li>
+<li>例如: stepSize = 5 - (key % 5), 满足需求, 并且结果不可能为0.</li>
+</ul>
+</li>
+</ul>
+<p><img src="./04.png" alt="导图"></p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/01HelloWorld/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  01HelloWorld
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/07%E5%AD%97%E5%85%B8/">
+                07字典
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '9ceNtDWOHVM9wantJJvy3Q0O-gzGzoHsz',
+			appKey: 'vekoCr5mzH7YTECDph85znmQ',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2020-<span id="footerYear"></span> 
+	<a href="/">linjiad</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<!--<br>-->
+	<!--Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>-->
+	<!--by <a href="//github.com/wujun234" target="_blank">WuJun</a>-->
+	<!--Powered by <a href="//hexo.io" target="_blank">Hexo</a>-->
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

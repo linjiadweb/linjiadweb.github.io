@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		哈希表实现 | 
+	 
+	linjiad技术博客
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="这个人很懒什么也没写" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">linjiad技术博客</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/linjiad" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/linjiad" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01编程基础
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01数据结构与算法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/00%E5%AF%BC%E8%AE%BA/">
+										00导论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01线性结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/01%E6%95%B0%E7%BB%84/">
+										01数组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/02%E6%A0%88/">
+										02栈
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/03%E9%98%9F%E5%88%97/">
+										03队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/04%E9%93%BE%E8%A1%A8/">
+										04链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/05%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">
+										05双向链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/06%E9%9B%86%E5%90%88/">
+										06集合
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/07%E5%AD%97%E5%85%B8/">
+										07字典
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02哈希表
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/27/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/02%E5%93%88%E5%B8%8C%E8%A1%A8/01%E5%93%88%E5%B8%8C%E8%A1%A8%E7%90%86%E8%AE%BA/">
+										01哈希表理论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/06/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/02%E5%93%88%E5%B8%8C%E8%A1%A8/02%E5%93%88%E5%B8%8C%E8%A1%A8%E5%AE%9E%E7%8E%B0/">
+										02哈希表实现
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03树
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/01%E6%A0%91%E7%BB%93%E6%9E%84/">
+										01树结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/02%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
+										02二叉搜索树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/03%E7%BA%A2%E9%BB%91%E6%A0%91/">
+										03红黑树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/04B%E5%92%8CB+%E6%A0%91/">
+										04B和B+树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/05%E5%9B%BE/">
+										05图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04算法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/04%E7%AE%97%E6%B3%95/01%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F/">
+										01简单排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/04%E7%AE%97%E6%B3%95/02%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F/">
+										02高级排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02设计模式
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01基础工作
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01%E5%9F%BA%E7%A1%80%E5%B7%A5%E4%BD%9C/01%E5%AF%B9%E8%B1%A1/">
+										01对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01%E5%9F%BA%E7%A1%80%E5%B7%A5%E4%BD%9C/02%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+										02设计原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02设计模式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										01工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										02抽象工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/03%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+										03单例模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/04%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										04适配器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/05%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										05装饰器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/06%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/">
+										06代理模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/07%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/">
+										07外观模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/08%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										08观察者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/09%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										09迭代器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/10%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/">
+										10状态模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/11%E5%85%B6%E4%BB%96%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+										11其他设计模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02web
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										ThreeJS
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01入门
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/01HelloWorld/">
+										01HelloWorld
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/02%E6%97%8B%E8%BD%AC%E5%8A%A8%E7%94%BB/">
+										02旋转动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/03%E9%BC%A0%E6%A0%87%E6%93%8D%E4%BD%9C/">
+										03鼠标操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/04%E6%8F%92%E5%85%A5%E5%A4%9A%E4%B8%AA%E5%87%A0%E4%BD%95%E4%BD%93/">
+										04插入多个几何体
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/05%E6%9D%90%E8%B4%A8/">
+										05材质
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/06%E5%85%89%E7%85%A7/">
+										06光照
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02顶点,几何体结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/01%E9%A1%B6%E7%82%B9%E4%BD%8D%E7%BD%AE/">
+										01顶点位置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/02%E9%A1%B6%E7%82%B9%E9%A2%9C%E8%89%B2/">
+										02顶点颜色
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/03%E9%A1%B6%E7%82%B9%E6%B3%95%E5%90%91%E9%87%8F/">
+										03顶点法向量
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/04%E7%B4%A2%E5%BC%95%E5%A4%8D%E7%94%A8%E9%A1%B6%E7%82%B9%E6%95%B0%E6%8D%AE/">
+										04索引复用顶点数据
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/05Geometry%E9%A1%B6%E7%82%B9%E4%BD%8D%E7%BD%AE%E3%80%81%E9%A1%B6%E7%82%B9%E9%A2%9C%E8%89%B2/">
+										05Geometry顶点位置、顶点颜色
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/06Face3%E5%AF%B9%E8%B1%A1%E5%AE%9A%E4%B9%89Geometry/">
+										06Face3对象定义Geometry
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/07%E5%87%A0%E4%BD%95%E4%BD%93%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%95%B0%E6%8D%AE/">
+										07几何体对象的数据
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/08%E5%87%A0%E4%BD%95%E4%BD%93%E6%97%8B%E8%BD%AC,%E7%BC%A9%E6%94%BE,%E5%B9%B3%E7%A7%BB%E5%8F%98%E6%8D%A2/">
+										08几何体旋转,缩放,平移变换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03材质对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/03%E6%9D%90%E8%B4%A8%E5%AF%B9%E8%B1%A1/01%E5%B8%B8%E7%94%A8%E6%9D%90%E8%B4%A8%E5%AF%B9%E8%B1%A1/">
+										01常用材质对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04点线面模型对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/04%E7%82%B9%E7%BA%BF%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1/01%E7%82%B9%E3%80%81%E7%BA%BF%E3%80%81%E7%BD%91%E6%A0%BC%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D/">
+										01点、线、网格模型介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/04%E7%82%B9%E7%BA%BF%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1/02%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1%E6%97%8B%E8%BD%AC%E5%B9%B3%E7%A7%BB%E7%BC%A9%E6%94%BE%E5%8F%98%E6%8D%A2/">
+										02模型对象旋转平移缩放变换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/04%E7%82%B9%E7%BA%BF%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1/03%E5%85%8B%E9%9A%86.clone()%E5%92%8C%E5%A4%8D%E5%88%B6.copy()/">
+										03克隆.clone()和复制.copy()
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05光源对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/02/02web/ThreeJS/05%E5%85%89%E6%BA%90%E5%AF%B9%E8%B1%A1/01%E5%B8%B8%E8%A7%81%E5%85%89%E6%BA%90/">
+										01常见光源
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/08/02web/ThreeJS/05%E5%85%89%E6%BA%90%E5%AF%B9%E8%B1%A1/02%E6%8A%95%E5%BD%B1/">
+										02投影
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/08/02web/ThreeJS/05%E5%85%89%E6%BA%90%E5%AF%B9%E8%B1%A1/03%E5%9F%BA%E7%B1%BBLight%E5%92%8CObject3D/">
+										03基类Light和Object3D
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06层级模型
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/09/02web/ThreeJS/06%E5%B1%82%E7%BA%A7%E6%A8%A1%E5%9E%8B/01%E7%BB%84%E5%AF%B9%E8%B1%A1Group/">
+										01组对象Group
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/09/02web/ThreeJS/06%E5%B1%82%E7%BA%A7%E6%A8%A1%E5%9E%8B/02%E8%8A%82%E7%82%B9%E5%91%BD%E5%90%8D.%E6%9F%A5%E6%89%BE.%E9%81%8D%E5%8E%86/">
+										02节点命名.查找.遍历
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/10/02web/ThreeJS/06%E5%B1%82%E7%BA%A7%E6%A8%A1%E5%9E%8B/03%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87/">
+										03世界坐标
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07三维几何体建模
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/10/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/01%E5%87%A0%E4%BD%95%E4%BD%93%E5%92%8C%E6%9B%B2%E7%BA%BF/">
+										01几何体和曲线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/10/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/02%E7%BB%98%E5%88%B6%E5%9C%86%E5%BC%A7/">
+										02绘制圆弧
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/03%E6%A0%B7%E6%9D%A1%E6%9B%B2%E7%BA%BF,%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF/">
+										03样条曲线,贝塞尔曲线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/04%E5%A4%9A%E4%B8%AA%E7%BA%BF%E6%9D%A1%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF/">
+										04多个线条组合曲线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/05%E6%9B%B2%E7%BA%BF%E8%B7%AF%E5%BE%84%E7%AE%A1%E9%81%93/">
+										05曲线路径管道
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/06%E6%97%8B%E8%BD%AC%E6%88%90%E5%9E%8B/">
+										06旋转成型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/07%E8%BD%AE%E5%BB%93%E5%92%8C%E8%BD%AE%E5%BB%93%E5%A1%AB%E5%85%85/">
+										07轮廓和轮廓填充
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/08%E6%8B%89%E4%BC%B8%E6%89%AB%E6%8F%8F/">
+										08拉伸扫描
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										08纹理贴图
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/15/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/01%E5%88%9B%E5%BB%BA%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/">
+										01创建纹理贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/15/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/02UV%E6%98%A0%E5%B0%84%E5%8E%9F%E7%90%86/">
+										02UV映射原理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/15/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/03%E6%95%B0%E7%BB%84%E6%9D%90%E8%B4%A8,%E6%9D%90%E8%B4%A8%E7%B4%A2%E5%BC%95/">
+										03数组材质,材质索引
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/21/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/04%E7%BA%B9%E7%90%86%E5%AF%B9%E8%B1%A1Texture%E9%98%B5%E5%88%97,%E5%81%8F%E7%A7%BB,%E6%97%8B%E8%BD%AC/">
+										04纹理对象Texture阵列,偏移,旋转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/21/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/05%E7%94%BB%E5%B8%83%E8%A7%86%E9%A2%91%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/">
+										05画布视频纹理贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/21/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/06%E5%87%B9%E5%87%B8%E8%B4%B4%E5%9B%BE%E5%92%8C%E6%B3%95%E7%BA%BF%E8%B4%B4%E5%9B%BE/">
+										06凹凸贴图和法线贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/07%E5%85%89%E7%85%A7%E8%B4%B4%E5%9B%BE%E6%B7%BB%E5%8A%A0%E9%98%B4%E5%BD%B1/">
+										07光照贴图添加阴影
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/08%E9%AB%98%E5%85%89%E8%B4%B4%E5%9B%BE/">
+										08高光贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/09%E7%8E%AF%E5%A2%83%E8%B4%B4%E5%9B%BE/">
+										09环境贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/10%E6%95%B0%E6%8D%AE%E7%BA%B9%E7%90%86%E5%AF%B9%E8%B1%A1DataTexture/">
+										10数据纹理对象DataTexture
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09相机对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/09%E7%9B%B8%E6%9C%BA%E5%AF%B9%E8%B1%A1/01%E6%AD%A3%E6%8A%95%E5%BD%B1%E5%92%8C%E9%80%8F%E8%A7%86%E6%8A%95%E5%BD%B1%E7%9B%B8%E6%9C%BA/">
+										01正投影和透视投影相机
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/09%E7%9B%B8%E6%9C%BA%E5%AF%B9%E8%B1%A1/02%E7%AA%97%E5%8F%A3%E5%8F%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B8%B2%E6%9F%93/">
+										02窗口变化自适应渲染
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										10精灵模型,粒子系统
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/10%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B,%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F/01%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1Sprite/">
+										01精灵模型对象Sprite
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/10%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B,%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F/02%E5%9F%8E%E5%B8%82PM2.5/">
+										02城市PM2.5
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/10%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B,%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F/03%E4%B8%8B%E9%9B%A8%E5%9C%BA%E6%99%AF/">
+										03下雨场景
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										11帧动画
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/11%E5%B8%A7%E5%8A%A8%E7%94%BB/01%E7%BC%96%E8%BE%91%E5%85%B3%E9%94%AE%E5%B8%A7%E5%B9%B6%E8%A7%A3%E6%9E%90%E6%92%AD%E6%94%BE/">
+										01编辑关键帧并解析播放
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/11%E5%B8%A7%E5%8A%A8%E7%94%BB/02%E8%A7%A3%E6%9E%90%E5%A4%96%E9%83%A8%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%9A%84%E5%B8%A7%E5%8A%A8%E7%94%BB/">
+										02解析外部模型的的帧动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/23/02web/ThreeJS/11%E5%B8%A7%E5%8A%A8%E7%94%BB/03%E6%92%AD%E6%94%BE%E8%AE%BE%E7%BD%AE/">
+										03播放设置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										12骨骼,变形动画
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/01%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB%E5%8E%9F%E7%90%86/">
+										01骨骼动画原理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/02%E5%8A%A0%E8%BD%BD%E5%A4%96%E9%83%A8%E6%A8%A1%E5%9E%8B%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/">
+										02加载外部模型骨骼动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/03%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/">
+										03变形动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/04%E5%8A%A0%E8%BD%BD%E5%A4%96%E9%83%A8%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/">
+										04加载外部变形动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										13语音模块
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/13%E8%AF%AD%E9%9F%B3%E6%A8%A1%E5%9D%97/01%E9%9F%B3%E9%A2%91%E4%B8%8E%E5%9C%BA%E6%99%AF%E5%85%B3%E8%81%94/">
+										01音频与场景关联
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/13%E8%AF%AD%E9%9F%B3%E6%A8%A1%E5%9D%97/02%E9%9F%B3%E4%B9%90%E5%8F%AF%E8%A7%86%E5%8C%96/">
+										02音乐可视化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										14模型文件加载
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/01Three.js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/">
+										01Three.js数据结构导入导出
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/02stl%E6%A0%BC%E5%BC%8F%E6%A8%A1%E5%9E%8B%E5%8A%A0%E8%BD%BD/">
+										02stl格式模型加载
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/03%E5%8A%A0%E8%BD%BD.obj%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6/">
+										03加载.obj模型文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/04%E5%8A%A0%E8%BD%BDFBX%E5%B9%B6%E8%A7%A3%E6%9E%90%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/">
+										04加载FBX并解析骨骼动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/05%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88%E6%A1%88%E4%BE%8B/">
+										05在线预览案例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/06%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2/">
+										06渲染页面
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	02哈希表实现
+</h1>
+<div class="article-meta">
+	
+	<span>linjiad</span>
+	<span>2020-06-30 15:31:49</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h1><p>好的哈希函数满足下面几个特性</p>
+<ul>
+<li>快速的计算</li>
+<li>均匀的分布</li>
+<li>扩容</li>
+</ul>
+<h2 id="快速的计算"><a href="#快速的计算" class="headerlink" title="快速的计算"></a>快速的计算</h2><ul>
+<li>好的哈希函数应该尽可能让计算的过程变得简单, 应该可以快速计算出结果<ul>
+<li>哈希表的主要优点是它的速度, 所以在速度上不能满足, 那么就达不到设计的目的了.</li>
+<li>提高速度的一个办法就是让哈希函数中尽量少的有乘法和除法. 因为它们的性能是比较低的</li>
+</ul>
+</li>
+<li>cats = 3 * 27³+ 1 * 27² + 20 * 27 + 17= 60337<ul>
+<li>我们抽象一下, 这个表达式其实是一个多项式: a(n) * x^n + a(n-1) * x^(n-1) + … + a(1) * x + a(0)</li>
+<li>现在问题就变成了多项式有多少次乘法和加法<ul>
+<li>乘法次数: n＋(n－1)＋…＋1＝n(n+1)/2</li>
+<li>加法次数: n次</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>多项式的优化: 霍纳法则(秦九韶算法)<ul>
+<li>a(n) * x^n + a(n-1) * x^(n-1) + … + a(1) * x + a(0) = ((…(((an * x + a(n－1))x+a(n－2))x+ a(n－3))…)x+a1)x+a0</li>
+<li>变换后有多少次乘法和加法<ul>
+<li>乘法次数: n次</li>
+<li>加法次数: n次</li>
+</ul>
+</li>
+<li>如果使用大O表示时间复杂度的话, 我们直接从O(N²)降到了O(N).</li>
+</ul>
+</li>
+</ul>
+<h2 id="均匀的分布"><a href="#均匀的分布" class="headerlink" title="均匀的分布"></a>均匀的分布</h2><ul>
+<li>使用链地址法或者开放地址法处理映射到相同下标值的情况</li>
+<li>为了提供效率,避免聚集, 最好的情况还是让数据在哈希表中均匀分布</li>
+<li>我们需要在使用常量的地方, 尽量使用质数<ul>
+<li>一个大于1的自然数，除了1和它自身外，不能被其他自然数整除的数叫做质数</li>
+</ul>
+</li>
+<li>哈希表的长度使用质数<ul>
+<li>表长为15， 步长为5<ul>
+<li>有一个特定关键字映射到0, 步长为5. 探测序列是多少呢</li>
+<li>0 - 5 - 10 - 0 - 5 - 10, 依次类推, 循环下去</li>
+<li>算法只尝试着三个单元, 如果这三个单元已经有了数据, 那么会一直循环下去, 知道程序崩溃.</li>
+</ul>
+</li>
+<li>表长为13， 步长为5<ul>
+<li>0 - 5 - 10 - 2 - 7 - 12 - 4 - 9 - 1 - 6 - 11 - 3, 一直这样下去</li>
+<li>不仅不会产生循环, 而且可以让数据在哈希表中更加均匀的分布</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>N次幂的底数, 使用质数<ul>
+<li>采用质数的原因是为了产生的数据不按照某种规律递增</li>
+<li>表长为8， 步长为4<ul>
+<li>0 - 4 - 0 - 4, 依次类推, 循环下去</li>
+</ul>
+</li>
+<li>表长为8， 步长为5<ul>
+<li>0 - 5 - 2 - 7 - 4, 一直这样下去.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>链地址法中质数没有那么重要<ul>
+<li>因为不需要找空位置插入数据</li>
+</ul>
+</li>
+</ul>
+<h2 id="哈希函数实现"><a href="#哈希函数实现" class="headerlink" title="哈希函数实现"></a>哈希函数实现</h2><ul>
+<li>“abc”.charCodeAt(0) // 97</li>
+<li>str 需要哈希化的字符串</li>
+<li>max 取摩运算的值，就是哈希表的长度</li>
+<li>之前使用的是27, 这次可以使用一个接近的数, 比如29/31/37等等. 这里可以使用37.</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">hashFunc</span>(<span class="params">str, max</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1.初始化hashCode的值</span></span><br><span class="line">    <span class="keyword">var</span> hashCode = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.霍纳算法, 来计算hashCode的数值（把转换后的下标组合起来）</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; str.length; i++) &#123;</span><br><span class="line">        hashCode = <span class="number">37</span> * hashCode + str.charCodeAt(i) <span class="comment">// 提取的公因式是37</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.取模运算（压缩）</span></span><br><span class="line">    hashCode = hashCode % max</span><br><span class="line">    <span class="keyword">return</span> hashCode</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">alert(hashFunc(<span class="string">"abc"</span>, <span class="number">7</span>)) <span class="comment">// 4</span></span><br><span class="line">alert(hashFunc(<span class="string">"cba"</span>, <span class="number">7</span>)) <span class="comment">// 3</span></span><br><span class="line">alert(hashFunc(<span class="string">"nba"</span>, <span class="number">7</span>)) <span class="comment">// 5</span></span><br><span class="line">alert(hashFunc(<span class="string">"mba"</span>, <span class="number">7</span>)) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h1><ul>
+<li>采用链地址法来实现哈希表</li>
+<li>最终我们的哈希表的数据格式是这样: [[ [k,v], [k,v], [k,v] ] , [ [k,v], [k,v] ], [ [k,v] ]]</li>
+</ul>
+<h2 id="创建哈希表类"><a href="#创建哈希表类" class="headerlink" title="创建哈希表类"></a>创建哈希表类</h2><ul>
+<li>storage ：存放元素的集合（最终我们的哈希表的数据格式是这样: [[ [k,v], [k,v], [k,v] ] , [ [k,v], [k,v] ], [ [k,v] ] ]，k是员工的姓名，v是员工的信息）</li>
+<li>count ：当前Hash表存放多少元素（如果count大于limit则需要扩容）</li>
+<li>limit ：Hash表当前总长度</li>
+<li>直接将哈希函数定义在HashTable中</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建HashTable构造函数（链地址法）</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">HashTable</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 定义属性</span></span><br><span class="line">    <span class="keyword">this</span>.storage = [] <span class="comment">// 存放元素的集合（最终我们的哈希表的数据格式是这样: [[ [k,v], [k,v], [k,v] ] , [ [k,v], [k,v] ], [ [k,v] ] ]，k是员工的姓名，v是员工的信息）</span></span><br><span class="line">    <span class="keyword">this</span>.count = <span class="number">0</span> <span class="comment">// 当前Hash表存放多少元素（如果count大于limit则需要扩容）</span></span><br><span class="line">    <span class="keyword">this</span>.limit = <span class="number">8</span> <span class="comment">// Hash表当前总长度</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 哈希函数</span></span><br><span class="line">    HashTable.prototype.hashFunc = <span class="function"><span class="keyword">function</span>(<span class="params">str, max</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 1.初始化hashCode的值</span></span><br><span class="line">        <span class="keyword">var</span> hashCode = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.霍纳算法, 来计算hashCode的数值</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; str.length; i++) &#123;</span><br><span class="line">            hashCode = <span class="number">37</span> * hashCode + str.charCodeAt(i)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.取模运算</span></span><br><span class="line">        hashCode = hashCode % max</span><br><span class="line">        <span class="keyword">return</span> hashCode</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="插入-amp-修改数据"><a href="#插入-amp-修改数据" class="headerlink" title="插入&amp;修改数据"></a>插入&amp;修改数据</h2><p>如果没有就是插入，如果有就是修改</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 插入数据方法</span></span><br><span class="line">HashTable.prototype.put = <span class="function"><span class="keyword">function</span> (<span class="params">key, value</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1.获取key对应的index（storage中的位置）也是哈希化</span></span><br><span class="line">    <span class="keyword">var</span> index = <span class="keyword">this</span>.hashFunc(key, <span class="keyword">this</span>.limit)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.取出数组(也可以使用链表)</span></span><br><span class="line">    <span class="comment">// 数组中放置数据的方式: [[ [k,v], [k,v], [k,v] ] , [ [k,v], [k,v] ]  [ [k,v] ] ]</span></span><br><span class="line">    <span class="keyword">var</span> bucket = <span class="keyword">this</span>.storage[index]</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.判断这个数组是否存在（storage中是否存在）</span></span><br><span class="line">    <span class="keyword">if</span> (bucket === <span class="literal">undefined</span>) &#123;</span><br><span class="line">        <span class="comment">// 3.1创建桶</span></span><br><span class="line">        bucket = [] <span class="comment">// 如果不存在就创建空数组</span></span><br><span class="line">        <span class="keyword">this</span>.storage[index] = bucket <span class="comment">// 这个新建数组指向storage数组中的位置</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4.判断是新增还是修改原来的值.（如果k存在就是修改，如果k不存在就是插入）</span></span><br><span class="line">    <span class="keyword">var</span> override = <span class="literal">false</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; bucket.length; i++) &#123; <span class="comment">// 循环这个桶，如果是空数组[]，就会直接跳过循环</span></span><br><span class="line">        <span class="keyword">var</span> tuple = bucket[i]</span><br><span class="line">        <span class="keyword">if</span> (tuple[<span class="number">0</span>] === key) &#123; <span class="comment">//如果桶里面的key和插入的key相同，就做修改操作</span></span><br><span class="line">            tuple[<span class="number">1</span>] = value</span><br><span class="line">            override = <span class="literal">true</span> <span class="comment">// 把override设置为true为了跳过下面新增方法</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 5.如果是新增, !override这个是false就跳过下面方法</span></span><br><span class="line">    <span class="keyword">if</span> (!override) &#123;</span><br><span class="line">        bucket.push([key, value])</span><br><span class="line">        <span class="keyword">this</span>.count++ <span class="comment">// Hash表中数据增加了所以++</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.count &gt; <span class="keyword">this</span>.limit * <span class="number">0.75</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> primeNum = <span class="keyword">this</span>.getPrime(<span class="keyword">this</span>.limit * <span class="number">2</span>)</span><br><span class="line">            <span class="keyword">this</span>.resize(primeNum)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="扩充-缩减哈希表"><a href="#扩充-缩减哈希表" class="headerlink" title="扩充/缩减哈希表"></a>扩充/缩减哈希表</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 哈希表扩容</span></span><br><span class="line">HashTable.prototype.resize = <span class="function"><span class="keyword">function</span> (<span class="params">newLimit</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1.保存旧的数组内容</span></span><br><span class="line">    <span class="keyword">var</span> oldStorage = <span class="keyword">this</span>.storage</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.重置属性</span></span><br><span class="line">    <span class="keyword">this</span>.limit = newLimit <span class="comment">// 传入新的大小</span></span><br><span class="line">    <span class="keyword">this</span>.count = <span class="number">0</span></span><br><span class="line">    <span class="keyword">this</span>.storage = []</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.遍历旧数组中的所有数据项, 并且重新插入到哈希表中</span></span><br><span class="line">    oldStorage.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">bucket</span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 1.bucket为null, 说明这里面没有数据</span></span><br><span class="line">        <span class="keyword">if</span> (bucket == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.bucket中有数据, 那么将里面的数据重新哈希化插入</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; bucket.length; i++) &#123;</span><br><span class="line">            <span class="keyword">var</span> tuple = bucket[i]</span><br><span class="line">            <span class="keyword">this</span>.put(tuple[<span class="number">0</span>], tuple[<span class="number">1</span>])<span class="comment">//重新插入到新的数组</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).bind(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取存放的数据</span></span><br><span class="line">HashTable.prototype.get = <span class="function"><span class="keyword">function</span> (<span class="params">key</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1.获取key对应的index</span></span><br><span class="line">    <span class="keyword">var</span> index = <span class="keyword">this</span>.hashFunc(key, <span class="keyword">this</span>.limit)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.获取对应的bucket</span></span><br><span class="line">    <span class="keyword">var</span> bucket = <span class="keyword">this</span>.storage[index]</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.如果bucket为null, 那么说明这个位置没有数据</span></span><br><span class="line">    <span class="keyword">if</span> (bucket == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4.有bucket, 判断是否有对应的key</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; bucket.length; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> tuple = bucket[i]</span><br><span class="line">        <span class="keyword">if</span> (tuple[<span class="number">0</span>] === key) &#123;</span><br><span class="line">            <span class="keyword">return</span> tuple[<span class="number">1</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 5.没有找到, return null</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 删除数据</span></span><br><span class="line">HashTable.prototype.remove = <span class="function"><span class="keyword">function</span> (<span class="params">key</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1.获取key对应的index</span></span><br><span class="line">    <span class="keyword">var</span> index = <span class="keyword">this</span>.hashFunc(key, <span class="keyword">this</span>.limit)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.获取对应的bucket</span></span><br><span class="line">    <span class="keyword">var</span> bucket = <span class="keyword">this</span>.storage[index]</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.判断同是否为null, 为null则说明没有对应的数据</span></span><br><span class="line">    <span class="keyword">if</span> (bucket == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4.遍历bucket, 寻找对应的数据</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; bucket.length; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> tuple = bucket[i]</span><br><span class="line">        <span class="keyword">if</span> (tuple[<span class="number">0</span>] === key) &#123;</span><br><span class="line">            bucket.splice(i, <span class="number">1</span>) <span class="comment">// 删除桶中数据</span></span><br><span class="line">            <span class="keyword">this</span>.count-- <span class="comment">// Hash表中少了，所以--</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 缩小数组的容量</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.limit &gt; <span class="number">7</span> &amp;&amp; <span class="keyword">this</span>.count &lt; <span class="keyword">this</span>.limit * (<span class="number">1</span><span class="number">-0.75</span>)) &#123;</span><br><span class="line">                <span class="keyword">var</span> primeNum = <span class="keyword">this</span>.getPrime(<span class="built_in">Math</span>.floor(<span class="keyword">this</span>.limit / <span class="number">2</span>))</span><br><span class="line">                <span class="keyword">this</span>.resize(primeNum) <span class="comment">// 缩小容量</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> tuple[<span class="number">1</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 5.来到该位置, 说明没有对应的数据, 那么返回null</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h2><ul>
+<li>判断哈希表是否为空: isEmpty</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// isEmpty方法</span></span><br><span class="line">HashTable.prototype.isEmpty = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.count == <span class="number">0</span> <span class="comment">// 如果count是0就代表是空</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>size方法</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// size方法</span></span><br><span class="line">HashTable.prototype.size = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.count</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/07/01/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/01%E6%A0%91%E7%BB%93%E6%9E%84/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  01树结构
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/05Geometry%E9%A1%B6%E7%82%B9%E4%BD%8D%E7%BD%AE%E3%80%81%E9%A1%B6%E7%82%B9%E9%A2%9C%E8%89%B2/">
+                05Geometry顶点位置、顶点颜色
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '9ceNtDWOHVM9wantJJvy3Q0O-gzGzoHsz',
+			appKey: 'vekoCr5mzH7YTECDph85znmQ',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2020-<span id="footerYear"></span> 
+	<a href="/">linjiad</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<!--<br>-->
+	<!--Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>-->
+	<!--by <a href="//github.com/wujun234" target="_blank">WuJun</a>-->
+	<!--Powered by <a href="//hexo.io" target="_blank">Hexo</a>-->
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		链表 | 
+	 
+	linjiad技术博客
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="这个人很懒什么也没写" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">linjiad技术博客</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/linjiad" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/linjiad" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01编程基础
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01数据结构与算法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/00%E5%AF%BC%E8%AE%BA/">
+										00导论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01线性结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/01%E6%95%B0%E7%BB%84/">
+										01数组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/02%E6%A0%88/">
+										02栈
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/03%E9%98%9F%E5%88%97/">
+										03队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/04%E9%93%BE%E8%A1%A8/">
+										04链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/05%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">
+										05双向链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/06%E9%9B%86%E5%90%88/">
+										06集合
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/07%E5%AD%97%E5%85%B8/">
+										07字典
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02哈希表
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/27/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/02%E5%93%88%E5%B8%8C%E8%A1%A8/01%E5%93%88%E5%B8%8C%E8%A1%A8%E7%90%86%E8%AE%BA/">
+										01哈希表理论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/02%E5%93%88%E5%B8%8C%E8%A1%A8/02%E5%93%88%E5%B8%8C%E8%A1%A8%E5%AE%9E%E7%8E%B0/">
+										02哈希表实现
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03树
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/01%E6%A0%91%E7%BB%93%E6%9E%84/">
+										01树结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/02%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
+										02二叉搜索树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/03%E7%BA%A2%E9%BB%91%E6%A0%91/">
+										03红黑树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/04B%E5%92%8CB+%E6%A0%91/">
+										04B和B+树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/05%E5%9B%BE/">
+										05图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04算法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/04%E7%AE%97%E6%B3%95/01%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F/">
+										01简单排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/04%E7%AE%97%E6%B3%95/02%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F/">
+										02高级排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02设计模式
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01基础工作
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01%E5%9F%BA%E7%A1%80%E5%B7%A5%E4%BD%9C/01%E5%AF%B9%E8%B1%A1/">
+										01对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01%E5%9F%BA%E7%A1%80%E5%B7%A5%E4%BD%9C/02%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+										02设计原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02设计模式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										01工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										02抽象工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/03%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+										03单例模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/04%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										04适配器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/05%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										05装饰器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/06%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/">
+										06代理模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/07%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/">
+										07外观模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/08%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										08观察者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/09%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										09迭代器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/10%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/">
+										10状态模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/11%E5%85%B6%E4%BB%96%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+										11其他设计模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02web
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										ThreeJS
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01入门
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/01HelloWorld/">
+										01HelloWorld
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/02%E6%97%8B%E8%BD%AC%E5%8A%A8%E7%94%BB/">
+										02旋转动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/03%E9%BC%A0%E6%A0%87%E6%93%8D%E4%BD%9C/">
+										03鼠标操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/04%E6%8F%92%E5%85%A5%E5%A4%9A%E4%B8%AA%E5%87%A0%E4%BD%95%E4%BD%93/">
+										04插入多个几何体
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/05%E6%9D%90%E8%B4%A8/">
+										05材质
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/06%E5%85%89%E7%85%A7/">
+										06光照
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02顶点,几何体结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/01%E9%A1%B6%E7%82%B9%E4%BD%8D%E7%BD%AE/">
+										01顶点位置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/02%E9%A1%B6%E7%82%B9%E9%A2%9C%E8%89%B2/">
+										02顶点颜色
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/03%E9%A1%B6%E7%82%B9%E6%B3%95%E5%90%91%E9%87%8F/">
+										03顶点法向量
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/04%E7%B4%A2%E5%BC%95%E5%A4%8D%E7%94%A8%E9%A1%B6%E7%82%B9%E6%95%B0%E6%8D%AE/">
+										04索引复用顶点数据
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/05Geometry%E9%A1%B6%E7%82%B9%E4%BD%8D%E7%BD%AE%E3%80%81%E9%A1%B6%E7%82%B9%E9%A2%9C%E8%89%B2/">
+										05Geometry顶点位置、顶点颜色
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/06Face3%E5%AF%B9%E8%B1%A1%E5%AE%9A%E4%B9%89Geometry/">
+										06Face3对象定义Geometry
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/07%E5%87%A0%E4%BD%95%E4%BD%93%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%95%B0%E6%8D%AE/">
+										07几何体对象的数据
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/08%E5%87%A0%E4%BD%95%E4%BD%93%E6%97%8B%E8%BD%AC,%E7%BC%A9%E6%94%BE,%E5%B9%B3%E7%A7%BB%E5%8F%98%E6%8D%A2/">
+										08几何体旋转,缩放,平移变换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03材质对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/03%E6%9D%90%E8%B4%A8%E5%AF%B9%E8%B1%A1/01%E5%B8%B8%E7%94%A8%E6%9D%90%E8%B4%A8%E5%AF%B9%E8%B1%A1/">
+										01常用材质对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04点线面模型对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/04%E7%82%B9%E7%BA%BF%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1/01%E7%82%B9%E3%80%81%E7%BA%BF%E3%80%81%E7%BD%91%E6%A0%BC%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D/">
+										01点、线、网格模型介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/04%E7%82%B9%E7%BA%BF%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1/02%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1%E6%97%8B%E8%BD%AC%E5%B9%B3%E7%A7%BB%E7%BC%A9%E6%94%BE%E5%8F%98%E6%8D%A2/">
+										02模型对象旋转平移缩放变换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/04%E7%82%B9%E7%BA%BF%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1/03%E5%85%8B%E9%9A%86.clone()%E5%92%8C%E5%A4%8D%E5%88%B6.copy()/">
+										03克隆.clone()和复制.copy()
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05光源对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/02/02web/ThreeJS/05%E5%85%89%E6%BA%90%E5%AF%B9%E8%B1%A1/01%E5%B8%B8%E8%A7%81%E5%85%89%E6%BA%90/">
+										01常见光源
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/08/02web/ThreeJS/05%E5%85%89%E6%BA%90%E5%AF%B9%E8%B1%A1/02%E6%8A%95%E5%BD%B1/">
+										02投影
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/08/02web/ThreeJS/05%E5%85%89%E6%BA%90%E5%AF%B9%E8%B1%A1/03%E5%9F%BA%E7%B1%BBLight%E5%92%8CObject3D/">
+										03基类Light和Object3D
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06层级模型
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/09/02web/ThreeJS/06%E5%B1%82%E7%BA%A7%E6%A8%A1%E5%9E%8B/01%E7%BB%84%E5%AF%B9%E8%B1%A1Group/">
+										01组对象Group
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/09/02web/ThreeJS/06%E5%B1%82%E7%BA%A7%E6%A8%A1%E5%9E%8B/02%E8%8A%82%E7%82%B9%E5%91%BD%E5%90%8D.%E6%9F%A5%E6%89%BE.%E9%81%8D%E5%8E%86/">
+										02节点命名.查找.遍历
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/10/02web/ThreeJS/06%E5%B1%82%E7%BA%A7%E6%A8%A1%E5%9E%8B/03%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87/">
+										03世界坐标
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07三维几何体建模
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/10/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/01%E5%87%A0%E4%BD%95%E4%BD%93%E5%92%8C%E6%9B%B2%E7%BA%BF/">
+										01几何体和曲线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/10/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/02%E7%BB%98%E5%88%B6%E5%9C%86%E5%BC%A7/">
+										02绘制圆弧
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/03%E6%A0%B7%E6%9D%A1%E6%9B%B2%E7%BA%BF,%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF/">
+										03样条曲线,贝塞尔曲线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/04%E5%A4%9A%E4%B8%AA%E7%BA%BF%E6%9D%A1%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF/">
+										04多个线条组合曲线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/05%E6%9B%B2%E7%BA%BF%E8%B7%AF%E5%BE%84%E7%AE%A1%E9%81%93/">
+										05曲线路径管道
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/06%E6%97%8B%E8%BD%AC%E6%88%90%E5%9E%8B/">
+										06旋转成型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/07%E8%BD%AE%E5%BB%93%E5%92%8C%E8%BD%AE%E5%BB%93%E5%A1%AB%E5%85%85/">
+										07轮廓和轮廓填充
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/08%E6%8B%89%E4%BC%B8%E6%89%AB%E6%8F%8F/">
+										08拉伸扫描
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										08纹理贴图
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/15/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/01%E5%88%9B%E5%BB%BA%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/">
+										01创建纹理贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/15/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/02UV%E6%98%A0%E5%B0%84%E5%8E%9F%E7%90%86/">
+										02UV映射原理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/15/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/03%E6%95%B0%E7%BB%84%E6%9D%90%E8%B4%A8,%E6%9D%90%E8%B4%A8%E7%B4%A2%E5%BC%95/">
+										03数组材质,材质索引
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/21/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/04%E7%BA%B9%E7%90%86%E5%AF%B9%E8%B1%A1Texture%E9%98%B5%E5%88%97,%E5%81%8F%E7%A7%BB,%E6%97%8B%E8%BD%AC/">
+										04纹理对象Texture阵列,偏移,旋转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/21/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/05%E7%94%BB%E5%B8%83%E8%A7%86%E9%A2%91%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/">
+										05画布视频纹理贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/21/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/06%E5%87%B9%E5%87%B8%E8%B4%B4%E5%9B%BE%E5%92%8C%E6%B3%95%E7%BA%BF%E8%B4%B4%E5%9B%BE/">
+										06凹凸贴图和法线贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/07%E5%85%89%E7%85%A7%E8%B4%B4%E5%9B%BE%E6%B7%BB%E5%8A%A0%E9%98%B4%E5%BD%B1/">
+										07光照贴图添加阴影
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/08%E9%AB%98%E5%85%89%E8%B4%B4%E5%9B%BE/">
+										08高光贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/09%E7%8E%AF%E5%A2%83%E8%B4%B4%E5%9B%BE/">
+										09环境贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/10%E6%95%B0%E6%8D%AE%E7%BA%B9%E7%90%86%E5%AF%B9%E8%B1%A1DataTexture/">
+										10数据纹理对象DataTexture
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09相机对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/09%E7%9B%B8%E6%9C%BA%E5%AF%B9%E8%B1%A1/01%E6%AD%A3%E6%8A%95%E5%BD%B1%E5%92%8C%E9%80%8F%E8%A7%86%E6%8A%95%E5%BD%B1%E7%9B%B8%E6%9C%BA/">
+										01正投影和透视投影相机
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/09%E7%9B%B8%E6%9C%BA%E5%AF%B9%E8%B1%A1/02%E7%AA%97%E5%8F%A3%E5%8F%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B8%B2%E6%9F%93/">
+										02窗口变化自适应渲染
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										10精灵模型,粒子系统
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/10%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B,%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F/01%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1Sprite/">
+										01精灵模型对象Sprite
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/10%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B,%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F/02%E5%9F%8E%E5%B8%82PM2.5/">
+										02城市PM2.5
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/10%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B,%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F/03%E4%B8%8B%E9%9B%A8%E5%9C%BA%E6%99%AF/">
+										03下雨场景
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										11帧动画
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/11%E5%B8%A7%E5%8A%A8%E7%94%BB/01%E7%BC%96%E8%BE%91%E5%85%B3%E9%94%AE%E5%B8%A7%E5%B9%B6%E8%A7%A3%E6%9E%90%E6%92%AD%E6%94%BE/">
+										01编辑关键帧并解析播放
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/11%E5%B8%A7%E5%8A%A8%E7%94%BB/02%E8%A7%A3%E6%9E%90%E5%A4%96%E9%83%A8%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%9A%84%E5%B8%A7%E5%8A%A8%E7%94%BB/">
+										02解析外部模型的的帧动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/23/02web/ThreeJS/11%E5%B8%A7%E5%8A%A8%E7%94%BB/03%E6%92%AD%E6%94%BE%E8%AE%BE%E7%BD%AE/">
+										03播放设置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										12骨骼,变形动画
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/01%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB%E5%8E%9F%E7%90%86/">
+										01骨骼动画原理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/02%E5%8A%A0%E8%BD%BD%E5%A4%96%E9%83%A8%E6%A8%A1%E5%9E%8B%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/">
+										02加载外部模型骨骼动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/03%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/">
+										03变形动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/04%E5%8A%A0%E8%BD%BD%E5%A4%96%E9%83%A8%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/">
+										04加载外部变形动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										13语音模块
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/13%E8%AF%AD%E9%9F%B3%E6%A8%A1%E5%9D%97/01%E9%9F%B3%E9%A2%91%E4%B8%8E%E5%9C%BA%E6%99%AF%E5%85%B3%E8%81%94/">
+										01音频与场景关联
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/13%E8%AF%AD%E9%9F%B3%E6%A8%A1%E5%9D%97/02%E9%9F%B3%E4%B9%90%E5%8F%AF%E8%A7%86%E5%8C%96/">
+										02音乐可视化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										14模型文件加载
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/01Three.js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/">
+										01Three.js数据结构导入导出
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/02stl%E6%A0%BC%E5%BC%8F%E6%A8%A1%E5%9E%8B%E5%8A%A0%E8%BD%BD/">
+										02stl格式模型加载
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/03%E5%8A%A0%E8%BD%BD.obj%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6/">
+										03加载.obj模型文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/04%E5%8A%A0%E8%BD%BDFBX%E5%B9%B6%E8%A7%A3%E6%9E%90%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/">
+										04加载FBX并解析骨骼动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/05%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88%E6%A1%88%E4%BE%8B/">
+										05在线预览案例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/06%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2/">
+										06渲染页面
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	04链表
+</h1>
+<div class="article-meta">
+	
+	<span>linjiad</span>
+	<span>2020-06-25 19:31:49</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="什么是链表"><a href="#什么是链表" class="headerlink" title="什么是链表"></a>什么是链表</h1><blockquote>
+<p>链表类似于火车: 有一个火车头, 火车头会连接一个节点, 节点上有乘客, 并且这个节点会连接下一个节点, 以此类推.</p>
+</blockquote>
+<ul>
+<li>链表的火车结构</li>
+</ul>
+<p><img src="./01.png" alt="火车结构"></p>
+<ul>
+<li>链表的数据结构</li>
+</ul>
+<p><img src="./02.png" alt="链表结构"></p>
+<ul>
+<li>给火车加上数据后的结构</li>
+</ul>
+<p><img src="./03.png" alt="火车链表结构"></p>
+<h1 id="数组和链表"><a href="#数组和链表" class="headerlink" title="数组和链表"></a>数组和链表</h1><h3 id="数组的缺点"><a href="#数组的缺点" class="headerlink" title="数组的缺点"></a>数组的缺点</h3><ul>
+<li>数组的创建通常需要申请一段连续的内存空间(一整块的内存), 并且大小是固定的, 所以当当前数组不能满足容量需求时, 需要扩容. (一般情况下是申请一个更大的数组, 比如2倍. 然后将原数组中的元素复制过去)</li>
+<li>在数组开头或中间位置插入数据的成本很高, 需要进行大量元素的位移.</li>
+</ul>
+<h3 id="链表的优点"><a href="#链表的优点" class="headerlink" title="链表的优点"></a>链表的优点</h3><ul>
+<li>内存空间不是比是连续的. 可以充分利用计算机的内存. 实现灵活的内存动态管理</li>
+<li>链表不必在创建时就确定大小, 并且大小可以无限的延伸下去</li>
+<li>链表在插入和删除数据时, 时间复杂度可以达到O(1). 相对数组效率高很多</li>
+</ul>
+<h3 id="链表的缺点"><a href="#链表的缺点" class="headerlink" title="链表的缺点"></a>链表的缺点</h3><ul>
+<li>链表访问任何一个位置的元素时, 都需要从头开始访问.(无法跳过第一个元素访问任何一个元素).</li>
+<li>无法通过下标直接访问元素, 需要从头一个个访问, 直到找到对应的问题.</li>
+</ul>
+<h1 id="链表的封装"><a href="#链表的封装" class="headerlink" title="链表的封装"></a>链表的封装</h1><h2 id="创建链表类"><a href="#创建链表类" class="headerlink" title="创建链表类"></a>创建链表类</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 封装链表的构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">LinkedList</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 封装一个Node类, 用于保存每个节点信息</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Node</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.element = element <span class="comment">// 节点数据</span></span><br><span class="line">        <span class="keyword">this</span>.next = <span class="literal">null</span> <span class="comment">// 指向下个节点</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 链表中的属性</span></span><br><span class="line">    <span class="keyword">this</span>.length = <span class="number">0</span>  <span class="comment">// 链表的长度</span></span><br><span class="line">    <span class="keyword">this</span>.head = <span class="literal">null</span> <span class="comment">// 链表的第一个节点</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="链表尾部追加元素方法"><a href="#链表尾部追加元素方法" class="headerlink" title="链表尾部追加元素方法"></a>链表尾部追加元素方法</h2><ul>
+<li>场景一: 链表本身是空的, 比如这种情况下我们插入了一个15作为元素.</li>
+</ul>
+<p><img src="./04.png" alt="尾部追加场景1"></p>
+<ul>
+<li>场景二: 链表中已经有元素了, 需要向最后的节点的next中添加节点.<ul>
+<li>首先找到head</li>
+<li>循环到最后，让最后节点指向这个新节点</li>
+<li>长度+1</li>
+</ul>
+</li>
+</ul>
+<p><img src="./05.png" alt="尾部追加场景2"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 链表尾部追加元素方法</span></span><br><span class="line">LinkedList.prototype.append = <span class="function"><span class="keyword">function</span> (<span class="params">element</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1.根据新元素创建节点</span></span><br><span class="line">    <span class="keyword">var</span> newNode = <span class="keyword">new</span> Node(element)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.判断原来链表是否为空</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.head === <span class="literal">null</span>) &#123; <span class="comment">// 链表为空</span></span><br><span class="line">        <span class="keyword">this</span>.head = newNode <span class="comment">// 直接插入，让头指向这个节点</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; <span class="comment">// 链表不为空</span></span><br><span class="line">        <span class="comment">// 2.1.定义变量, 保存当前找到的节点</span></span><br><span class="line">        <span class="keyword">var</span> current = <span class="keyword">this</span>.head</span><br><span class="line">        <span class="keyword">while</span> (current.next) &#123; <span class="comment">// 循环直到next为null就代表是末尾</span></span><br><span class="line">            current = current.next <span class="comment">// 这个是最后一个next=null的</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.2.找到最后一项, 将其next赋值为node</span></span><br><span class="line">        current.next = newNode</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.链表长度增加1</span></span><br><span class="line">    <span class="keyword">this</span>.length++</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="链表的toString方法"><a href="#链表的toString方法" class="headerlink" title="链表的toString方法"></a>链表的toString方法</h2><ul>
+<li>定义两个变量<ul>
+<li>找到链表的头</li>
+<li>定义字符串</li>
+</ul>
+</li>
+<li>循环获取链表中所有的元素</li>
+<li>返回最终结果</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 链表的toString方法</span></span><br><span class="line">LinkedList.prototype.toString = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1.定义两个变量</span></span><br><span class="line">    <span class="keyword">var</span> current = <span class="keyword">this</span>.head <span class="comment">// 找到链表的头</span></span><br><span class="line">    <span class="keyword">var</span> listString = <span class="string">""</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.循环获取链表中所有的元素</span></span><br><span class="line">    <span class="keyword">while</span> (current) &#123;</span><br><span class="line">        listString += <span class="string">","</span> + current.element</span><br><span class="line">        current = current.next</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.返回最终结果</span></span><br><span class="line">    <span class="keyword">return</span> listString.slice(<span class="number">1</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="根据位置插入元素"><a href="#根据位置插入元素" class="headerlink" title="根据位置插入元素"></a>根据位置插入元素</h2><ul>
+<li>添加到第一个位置<ul>
+<li>获取原来的头元素</li>
+<li>让head指向新元素</li>
+<li>新元素链表指向原来的头元素</li>
+</ul>
+</li>
+</ul>
+<p><img src="./06.png" alt="根据位置插入元素1"></p>
+<ul>
+<li>添加到其他位置<ul>
+<li>循环一直到添加的位置，并获取原来元素以及这个元素的前一个元素</li>
+<li>前一个元素指向新元素</li>
+<li>新元素指向之前元素</li>
+</ul>
+</li>
+</ul>
+<p><img src="./07.png" alt="根据位置插入元素2"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">LinkedList.prototype.insert = <span class="function"><span class="keyword">function</span> (<span class="params">position, element</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1.检测越界问题: 越界插入失败</span></span><br><span class="line">    <span class="keyword">if</span> (position &lt; <span class="number">0</span> || position &gt; <span class="keyword">this</span>.length) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.定义变量, 保存信息</span></span><br><span class="line">    <span class="keyword">var</span> newNode = <span class="keyword">new</span> Node(element)</span><br><span class="line">    <span class="keyword">var</span> current = <span class="keyword">this</span>.head <span class="comment">// 这个是这个节点，需要新节点指向下一个节点</span></span><br><span class="line">    <span class="keyword">var</span> previous = <span class="literal">null</span> <span class="comment">// 这个是上一个节点，需要上一个节点的next指向新节点</span></span><br><span class="line">    index = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.判断是否列表是否在第一个位置插入</span></span><br><span class="line">    <span class="keyword">if</span> (position == <span class="number">0</span>) &#123;</span><br><span class="line">        newNode.next = current</span><br><span class="line">        <span class="keyword">this</span>.head = newNode</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">while</span> (index++ &lt; position) &#123; <span class="comment">//先判断再++</span></span><br><span class="line">            previous = current</span><br><span class="line">            current = current.next</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        newNode.next = current <span class="comment">// 新节点的next指向current</span></span><br><span class="line">        previous.next = newNode <span class="comment">// 前一个节点指向newNode</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4.length+1</span></span><br><span class="line">    <span class="keyword">this</span>.length++</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="根据位置获取节点"><a href="#根据位置获取节点" class="headerlink" title="根据位置获取节点"></a>根据位置获取节点</h2><ul>
+<li>循环直到指定的位置</li>
+<li>返回这个位置的元素</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据位置获取节点</span></span><br><span class="line">LinkedList.prototype.get = <span class="function"><span class="keyword">function</span> (<span class="params">position</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1.检测越界问题: 越界移除失败, 返回null</span></span><br><span class="line">    <span class="keyword">if</span> (position &lt; <span class="number">0</span> || position &gt;= <span class="keyword">this</span>.length) <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.定义变量, 保存信息</span></span><br><span class="line">    <span class="keyword">var</span> current = <span class="keyword">this</span>.head</span><br><span class="line">    <span class="keyword">var</span> index = <span class="number">0</span></span><br><span class="line">    <span class="comment">// 循环到要获取的位置</span></span><br><span class="line">    <span class="keyword">while</span> (index++ &lt; position) &#123;</span><br><span class="line">        current = current.next</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 5.返回获取的数据</span></span><br><span class="line">    <span class="keyword">return</span> current.element</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="根据元素获取链表中的位置"><a href="#根据元素获取链表中的位置" class="headerlink" title="根据元素获取链表中的位置"></a>根据元素获取链表中的位置</h2><ul>
+<li>循环直到节点等于传入的节点</li>
+<li>返回这个位置</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据元素获取链表中的位置</span></span><br><span class="line">LinkedList.prototype.indexOf = <span class="function"><span class="keyword">function</span> (<span class="params">element</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1.定义变量, 保存信息</span></span><br><span class="line">    <span class="keyword">var</span> current = <span class="keyword">this</span>.head</span><br><span class="line">    index = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.找到元素所在的位置</span></span><br><span class="line">    <span class="keyword">while</span> (current) &#123;</span><br><span class="line">        <span class="keyword">if</span> (current.element === element) &#123;</span><br><span class="line">            <span class="keyword">return</span> index</span><br><span class="line">        &#125;</span><br><span class="line">        index++</span><br><span class="line">        current = current.next</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.来到这个位置, 说明没有找到, 则返回-1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="根据位置移除节点"><a href="#根据位置移除节点" class="headerlink" title="根据位置移除节点"></a>根据位置移除节点</h2><ul>
+<li>移除第一项的信息<ul>
+<li>移除第一项时, 直接让head指向第二项信息就可以啦</li>
+<li>第一项信息没有引用指向, 就在链表中不再有效, 后面会被回收掉</li>
+</ul>
+</li>
+</ul>
+<p><img src="./08.png" alt="据位置移除节点1"></p>
+<ul>
+<li>移除其他项的信息<ul>
+<li>通过while循环, 找到正确的位置</li>
+<li>找到正确位置后, 就可以直接将上一项的next指向current项的next, 这样中间的项就没有引用指向它, 也就不再存在于链表后, 会面会被回收掉.</li>
+</ul>
+</li>
+</ul>
+<p><img src="./10.png" alt="据位置移除节点2"></p>
+<p><img src="./11.png" alt="据位置移除节点3"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据位置移除节点</span></span><br><span class="line">LinkedList.prototype.removeAt = <span class="function"><span class="keyword">function</span> (<span class="params">position</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1.检测越界问题: 越界移除失败, 返回null</span></span><br><span class="line">    <span class="keyword">if</span> (position &lt; <span class="number">0</span> || position &gt;= <span class="keyword">this</span>.length) <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.定义变量, 保存信息</span></span><br><span class="line">    <span class="keyword">var</span> current = <span class="keyword">this</span>.head</span><br><span class="line">    <span class="keyword">var</span> previous = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">var</span> index = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.判断是否是移除第一项</span></span><br><span class="line">    <span class="keyword">if</span> (position === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.head = current.next</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">while</span> (index++ &lt; position) &#123;</span><br><span class="line">            previous = current</span><br><span class="line">            current = current.next</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        previous.next = current.next</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4.length-1</span></span><br><span class="line">    <span class="keyword">this</span>.length--</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 5.返回移除的数据</span></span><br><span class="line">    <span class="keyword">return</span> current.element</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="根据位置修改节点"><a href="#根据位置修改节点" class="headerlink" title="根据位置修改节点"></a>根据位置修改节点</h2><ul>
+<li>循环到指定位置</li>
+<li>修改节点的值</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据位置修改节点</span></span><br><span class="line">LinkedList.prototype.update = <span class="function"><span class="keyword">function</span> (<span class="params">position, newData</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1.检测越界问题: 越界移除失败, 返回null</span></span><br><span class="line">    <span class="keyword">if</span> (position &lt; <span class="number">0</span> || position &gt;= <span class="keyword">this</span>.length) <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.定义变量, 保存信息</span></span><br><span class="line">    <span class="keyword">var</span> current = <span class="keyword">this</span>.head</span><br><span class="line">    <span class="keyword">var</span> index = <span class="number">0</span></span><br><span class="line">    <span class="comment">// 循环到要获取的位置</span></span><br><span class="line">    <span class="keyword">while</span> (index++ &lt; position) &#123;</span><br><span class="line">        current = current.next</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 修改节点</span></span><br><span class="line">    current.element = newData;</span><br><span class="line">    <span class="comment">// 5.返回成功</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="根据元素删除信息"><a href="#根据元素删除信息" class="headerlink" title="根据元素删除信息"></a>根据元素删除信息</h2><ul>
+<li>调用之前定义的indexOf方法获取元素的位置</li>
+<li>调用之前定义的removeAt方法移除元素</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据元素删除信息</span></span><br><span class="line">LinkedList.prototype.remove = <span class="function"><span class="keyword">function</span> (<span class="params">element</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> index = <span class="keyword">this</span>.indexOf(element) <span class="comment">// 找到这个元素的位置</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.removeAt(index)<span class="comment">// 通过位置删除元素</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="判断链表是否为空"><a href="#判断链表是否为空" class="headerlink" title="判断链表是否为空"></a>判断链表是否为空</h2><ul>
+<li>看长度是否为0</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 判断链表是否为空</span></span><br><span class="line">LinkedList.prototype.isEmpty = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.length == <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="获取链表的长度"><a href="#获取链表的长度" class="headerlink" title="获取链表的长度"></a>获取链表的长度</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取链表的长度</span></span><br><span class="line">LinkedList.prototype.size = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.length</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="获取第一个节点"><a href="#获取第一个节点" class="headerlink" title="获取第一个节点"></a>获取第一个节点</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取第一个节点</span></span><br><span class="line">LinkedList.prototype.getFirst = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.head.element</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试链表"><a href="#测试链表" class="headerlink" title="测试链表"></a>测试链表</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.创建链表</span></span><br><span class="line">    <span class="keyword">var</span> list = <span class="keyword">new</span> LinkedList()</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2.追加元素</span></span><br><span class="line">    list.append(<span class="number">15</span>)</span><br><span class="line">    list.append(<span class="number">10</span>)</span><br><span class="line">    list.append(<span class="number">20</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.打印链表的结果</span></span><br><span class="line">    alert(list) <span class="comment">// 15,10,20</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4.测试insert方法</span></span><br><span class="line">    list.insert(<span class="number">0</span>, <span class="number">100</span>)</span><br><span class="line">    list.insert(<span class="number">4</span>, <span class="number">200</span>)</span><br><span class="line">    list.insert(<span class="number">2</span>, <span class="number">300</span>)</span><br><span class="line">    alert(list) <span class="comment">// 100,15,300,10,20,200</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 5.测试removeAt方法</span></span><br><span class="line">    list.removeAt(<span class="number">0</span>)</span><br><span class="line">    list.removeAt(<span class="number">1</span>)</span><br><span class="line">    list.removeAt(<span class="number">3</span>)</span><br><span class="line">    alert(list)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 6.测试indexOf方法</span></span><br><span class="line">   alert(list.indexOf(<span class="number">15</span>))</span><br><span class="line">   alert(list.indexOf(<span class="number">10</span>))</span><br><span class="line">   alert(list.indexOf(<span class="number">20</span>))</span><br><span class="line">   alert(list.indexOf(<span class="number">100</span>))</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 7.测试remove方法</span></span><br><span class="line">    list.remove(<span class="number">15</span>)</span><br><span class="line">    alert(list)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 8.测试其他方法</span></span><br><span class="line">    alert(list.isEmpty())</span><br><span class="line">    alert(list.size())</span><br><span class="line">    alert(list.getFirst())</span><br></pre></td></tr></table></figure>
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/05%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  05双向链表
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/03%E9%98%9F%E5%88%97/">
+                03队列
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '9ceNtDWOHVM9wantJJvy3Q0O-gzGzoHsz',
+			appKey: 'vekoCr5mzH7YTECDph85znmQ',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2020-<span id="footerYear"></span> 
+	<a href="/">linjiad</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<!--<br>-->
+	<!--Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>-->
+	<!--by <a href="//github.com/wujun234" target="_blank">WuJun</a>-->
+	<!--Powered by <a href="//hexo.io" target="_blank">Hexo</a>-->
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
