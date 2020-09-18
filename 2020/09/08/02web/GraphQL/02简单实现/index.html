@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		简单实现 | 
+	 
+	linjiad技术博客
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="这个人很懒什么也没写" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">linjiad技术博客</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/linjiad" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/linjiad" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01编程基础
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01数据结构与算法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/00%E5%AF%BC%E8%AE%BA/">
+										00导论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01线性结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/01%E6%95%B0%E7%BB%84/">
+										01数组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/02%E6%A0%88/">
+										02栈
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/03%E9%98%9F%E5%88%97/">
+										03队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/25/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/04%E9%93%BE%E8%A1%A8/">
+										04链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/05%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/">
+										05双向链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/06%E9%9B%86%E5%90%88/">
+										06集合
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/26/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/01%E7%BA%BF%E6%80%A7%E7%BB%93%E6%9E%84/07%E5%AD%97%E5%85%B8/">
+										07字典
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02哈希表
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/27/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/02%E5%93%88%E5%B8%8C%E8%A1%A8/01%E5%93%88%E5%B8%8C%E8%A1%A8%E7%90%86%E8%AE%BA/">
+										01哈希表理论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/02%E5%93%88%E5%B8%8C%E8%A1%A8/02%E5%93%88%E5%B8%8C%E8%A1%A8%E5%AE%9E%E7%8E%B0/">
+										02哈希表实现
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03树
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/01%E6%A0%91%E7%BB%93%E6%9E%84/">
+										01树结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/02%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
+										02二叉搜索树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/03%E7%BA%A2%E9%BB%91%E6%A0%91/">
+										03红黑树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/04B%E5%92%8CB+%E6%A0%91/">
+										04B和B+树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/03%E6%A0%91/05%E5%9B%BE/">
+										05图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04算法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/04%E7%AE%97%E6%B3%95/01%E7%AE%80%E5%8D%95%E6%8E%92%E5%BA%8F/">
+										01简单排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/07/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/01%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/04%E7%AE%97%E6%B3%95/02%E9%AB%98%E7%BA%A7%E6%8E%92%E5%BA%8F/">
+										02高级排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02设计模式
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01基础工作
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01%E5%9F%BA%E7%A1%80%E5%B7%A5%E4%BD%9C/01%E5%AF%B9%E8%B1%A1/">
+										01对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01%E5%9F%BA%E7%A1%80%E5%B7%A5%E4%BD%9C/02%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/">
+										02设计原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02设计模式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										01工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/30/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										02抽象工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/03%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+										03单例模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/04%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										04适配器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/05%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										05装饰器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/06%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/">
+										06代理模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/06/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/07%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/">
+										07外观模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/08%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										08观察者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/09%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										09迭代器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/10%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/">
+										10状态模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/12/01%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/11%E5%85%B6%E4%BB%96%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
+										11其他设计模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02web
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										GraphQL
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/08/02web/GraphQL/01%E5%AF%BC%E8%A8%80/">
+										01导言
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/09/08/02web/GraphQL/02%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0/">
+										02简单实现
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										ThreeJS
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01入门
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/01HelloWorld/">
+										01HelloWorld
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/02%E6%97%8B%E8%BD%AC%E5%8A%A8%E7%94%BB/">
+										02旋转动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/03%E9%BC%A0%E6%A0%87%E6%93%8D%E4%BD%9C/">
+										03鼠标操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/04%E6%8F%92%E5%85%A5%E5%A4%9A%E4%B8%AA%E5%87%A0%E4%BD%95%E4%BD%93/">
+										04插入多个几何体
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/05%E6%9D%90%E8%B4%A8/">
+										05材质
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/01%E5%85%A5%E9%97%A8/06%E5%85%89%E7%85%A7/">
+										06光照
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02顶点,几何体结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/01%E9%A1%B6%E7%82%B9%E4%BD%8D%E7%BD%AE/">
+										01顶点位置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/02%E9%A1%B6%E7%82%B9%E9%A2%9C%E8%89%B2/">
+										02顶点颜色
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/29/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/03%E9%A1%B6%E7%82%B9%E6%B3%95%E5%90%91%E9%87%8F/">
+										03顶点法向量
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/04%E7%B4%A2%E5%BC%95%E5%A4%8D%E7%94%A8%E9%A1%B6%E7%82%B9%E6%95%B0%E6%8D%AE/">
+										04索引复用顶点数据
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/05Geometry%E9%A1%B6%E7%82%B9%E4%BD%8D%E7%BD%AE%E3%80%81%E9%A1%B6%E7%82%B9%E9%A2%9C%E8%89%B2/">
+										05Geometry顶点位置、顶点颜色
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/06Face3%E5%AF%B9%E8%B1%A1%E5%AE%9A%E4%B9%89Geometry/">
+										06Face3对象定义Geometry
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/07%E5%87%A0%E4%BD%95%E4%BD%93%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%95%B0%E6%8D%AE/">
+										07几何体对象的数据
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/06/30/02web/ThreeJS/02%E9%A1%B6%E7%82%B9,%E5%87%A0%E4%BD%95%E4%BD%93%E7%BB%93%E6%9E%84/08%E5%87%A0%E4%BD%95%E4%BD%93%E6%97%8B%E8%BD%AC,%E7%BC%A9%E6%94%BE,%E5%B9%B3%E7%A7%BB%E5%8F%98%E6%8D%A2/">
+										08几何体旋转,缩放,平移变换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03材质对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/03%E6%9D%90%E8%B4%A8%E5%AF%B9%E8%B1%A1/01%E5%B8%B8%E7%94%A8%E6%9D%90%E8%B4%A8%E5%AF%B9%E8%B1%A1/">
+										01常用材质对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04点线面模型对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/04%E7%82%B9%E7%BA%BF%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1/01%E7%82%B9%E3%80%81%E7%BA%BF%E3%80%81%E7%BD%91%E6%A0%BC%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D/">
+										01点、线、网格模型介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/04%E7%82%B9%E7%BA%BF%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1/02%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1%E6%97%8B%E8%BD%AC%E5%B9%B3%E7%A7%BB%E7%BC%A9%E6%94%BE%E5%8F%98%E6%8D%A2/">
+										02模型对象旋转平移缩放变换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/01/02web/ThreeJS/04%E7%82%B9%E7%BA%BF%E9%9D%A2%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1/03%E5%85%8B%E9%9A%86.clone()%E5%92%8C%E5%A4%8D%E5%88%B6.copy()/">
+										03克隆.clone()和复制.copy()
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05光源对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/02/02web/ThreeJS/05%E5%85%89%E6%BA%90%E5%AF%B9%E8%B1%A1/01%E5%B8%B8%E8%A7%81%E5%85%89%E6%BA%90/">
+										01常见光源
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/08/02web/ThreeJS/05%E5%85%89%E6%BA%90%E5%AF%B9%E8%B1%A1/02%E6%8A%95%E5%BD%B1/">
+										02投影
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/08/02web/ThreeJS/05%E5%85%89%E6%BA%90%E5%AF%B9%E8%B1%A1/03%E5%9F%BA%E7%B1%BBLight%E5%92%8CObject3D/">
+										03基类Light和Object3D
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06层级模型
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/09/02web/ThreeJS/06%E5%B1%82%E7%BA%A7%E6%A8%A1%E5%9E%8B/01%E7%BB%84%E5%AF%B9%E8%B1%A1Group/">
+										01组对象Group
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/09/02web/ThreeJS/06%E5%B1%82%E7%BA%A7%E6%A8%A1%E5%9E%8B/02%E8%8A%82%E7%82%B9%E5%91%BD%E5%90%8D.%E6%9F%A5%E6%89%BE.%E9%81%8D%E5%8E%86/">
+										02节点命名.查找.遍历
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/10/02web/ThreeJS/06%E5%B1%82%E7%BA%A7%E6%A8%A1%E5%9E%8B/03%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87/">
+										03世界坐标
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07三维几何体建模
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/10/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/01%E5%87%A0%E4%BD%95%E4%BD%93%E5%92%8C%E6%9B%B2%E7%BA%BF/">
+										01几何体和曲线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/10/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/02%E7%BB%98%E5%88%B6%E5%9C%86%E5%BC%A7/">
+										02绘制圆弧
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/03%E6%A0%B7%E6%9D%A1%E6%9B%B2%E7%BA%BF,%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF/">
+										03样条曲线,贝塞尔曲线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/04%E5%A4%9A%E4%B8%AA%E7%BA%BF%E6%9D%A1%E7%BB%84%E5%90%88%E6%9B%B2%E7%BA%BF/">
+										04多个线条组合曲线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/05%E6%9B%B2%E7%BA%BF%E8%B7%AF%E5%BE%84%E7%AE%A1%E9%81%93/">
+										05曲线路径管道
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/06%E6%97%8B%E8%BD%AC%E6%88%90%E5%9E%8B/">
+										06旋转成型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/07%E8%BD%AE%E5%BB%93%E5%92%8C%E8%BD%AE%E5%BB%93%E5%A1%AB%E5%85%85/">
+										07轮廓和轮廓填充
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/14/02web/ThreeJS/07%E4%B8%89%E7%BB%B4%E5%87%A0%E4%BD%95%E4%BD%93%E5%BB%BA%E6%A8%A1/08%E6%8B%89%E4%BC%B8%E6%89%AB%E6%8F%8F/">
+										08拉伸扫描
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										08纹理贴图
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/15/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/01%E5%88%9B%E5%BB%BA%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/">
+										01创建纹理贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/15/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/02UV%E6%98%A0%E5%B0%84%E5%8E%9F%E7%90%86/">
+										02UV映射原理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/15/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/03%E6%95%B0%E7%BB%84%E6%9D%90%E8%B4%A8,%E6%9D%90%E8%B4%A8%E7%B4%A2%E5%BC%95/">
+										03数组材质,材质索引
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/21/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/04%E7%BA%B9%E7%90%86%E5%AF%B9%E8%B1%A1Texture%E9%98%B5%E5%88%97,%E5%81%8F%E7%A7%BB,%E6%97%8B%E8%BD%AC/">
+										04纹理对象Texture阵列,偏移,旋转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/21/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/05%E7%94%BB%E5%B8%83%E8%A7%86%E9%A2%91%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/">
+										05画布视频纹理贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/21/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/06%E5%87%B9%E5%87%B8%E8%B4%B4%E5%9B%BE%E5%92%8C%E6%B3%95%E7%BA%BF%E8%B4%B4%E5%9B%BE/">
+										06凹凸贴图和法线贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/07%E5%85%89%E7%85%A7%E8%B4%B4%E5%9B%BE%E6%B7%BB%E5%8A%A0%E9%98%B4%E5%BD%B1/">
+										07光照贴图添加阴影
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/08%E9%AB%98%E5%85%89%E8%B4%B4%E5%9B%BE/">
+										08高光贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/09%E7%8E%AF%E5%A2%83%E8%B4%B4%E5%9B%BE/">
+										09环境贴图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/08%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE/10%E6%95%B0%E6%8D%AE%E7%BA%B9%E7%90%86%E5%AF%B9%E8%B1%A1DataTexture/">
+										10数据纹理对象DataTexture
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09相机对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/09%E7%9B%B8%E6%9C%BA%E5%AF%B9%E8%B1%A1/01%E6%AD%A3%E6%8A%95%E5%BD%B1%E5%92%8C%E9%80%8F%E8%A7%86%E6%8A%95%E5%BD%B1%E7%9B%B8%E6%9C%BA/">
+										01正投影和透视投影相机
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/09%E7%9B%B8%E6%9C%BA%E5%AF%B9%E8%B1%A1/02%E7%AA%97%E5%8F%A3%E5%8F%98%E5%8C%96%E8%87%AA%E9%80%82%E5%BA%94%E6%B8%B2%E6%9F%93/">
+										02窗口变化自适应渲染
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										10精灵模型,粒子系统
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/10%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B,%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F/01%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B%E5%AF%B9%E8%B1%A1Sprite/">
+										01精灵模型对象Sprite
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/10%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B,%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F/02%E5%9F%8E%E5%B8%82PM2.5/">
+										02城市PM2.5
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/10%E7%B2%BE%E7%81%B5%E6%A8%A1%E5%9E%8B,%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F/03%E4%B8%8B%E9%9B%A8%E5%9C%BA%E6%99%AF/">
+										03下雨场景
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										11帧动画
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/11%E5%B8%A7%E5%8A%A8%E7%94%BB/01%E7%BC%96%E8%BE%91%E5%85%B3%E9%94%AE%E5%B8%A7%E5%B9%B6%E8%A7%A3%E6%9E%90%E6%92%AD%E6%94%BE/">
+										01编辑关键帧并解析播放
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/22/02web/ThreeJS/11%E5%B8%A7%E5%8A%A8%E7%94%BB/02%E8%A7%A3%E6%9E%90%E5%A4%96%E9%83%A8%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%9A%84%E5%B8%A7%E5%8A%A8%E7%94%BB/">
+										02解析外部模型的的帧动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/23/02web/ThreeJS/11%E5%B8%A7%E5%8A%A8%E7%94%BB/03%E6%92%AD%E6%94%BE%E8%AE%BE%E7%BD%AE/">
+										03播放设置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										12骨骼,变形动画
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/01%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB%E5%8E%9F%E7%90%86/">
+										01骨骼动画原理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/02%E5%8A%A0%E8%BD%BD%E5%A4%96%E9%83%A8%E6%A8%A1%E5%9E%8B%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/">
+										02加载外部模型骨骼动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/03%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/">
+										03变形动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/27/02web/ThreeJS/12%E9%AA%A8%E9%AA%BC,%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/04%E5%8A%A0%E8%BD%BD%E5%A4%96%E9%83%A8%E5%8F%98%E5%BD%A2%E5%8A%A8%E7%94%BB/">
+										04加载外部变形动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										13语音模块
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/13%E8%AF%AD%E9%9F%B3%E6%A8%A1%E5%9D%97/01%E9%9F%B3%E9%A2%91%E4%B8%8E%E5%9C%BA%E6%99%AF%E5%85%B3%E8%81%94/">
+										01音频与场景关联
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/13%E8%AF%AD%E9%9F%B3%E6%A8%A1%E5%9D%97/02%E9%9F%B3%E4%B9%90%E5%8F%AF%E8%A7%86%E5%8C%96/">
+										02音乐可视化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										14模型文件加载
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/01Three.js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/">
+										01Three.js数据结构导入导出
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/02stl%E6%A0%BC%E5%BC%8F%E6%A8%A1%E5%9E%8B%E5%8A%A0%E8%BD%BD/">
+										02stl格式模型加载
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/03%E5%8A%A0%E8%BD%BD.obj%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6/">
+										03加载.obj模型文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/28/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/04%E5%8A%A0%E8%BD%BDFBX%E5%B9%B6%E8%A7%A3%E6%9E%90%E9%AA%A8%E9%AA%BC%E5%8A%A8%E7%94%BB/">
+										04加载FBX并解析骨骼动画
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/05%E5%9C%A8%E7%BA%BF%E9%A2%84%E8%A7%88%E6%A1%88%E4%BE%8B/">
+										05在线预览案例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/29/02web/ThreeJS/14%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD/06%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2/">
+										06渲染页面
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	02简单实现
+</h1>
+<div class="article-meta">
+	
+	<span>linjiad</span>
+	<span>2020-09-08 10:31:49</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="简答实现"><a href="#简答实现" class="headerlink" title="简答实现"></a>简答实现</h1><p>用express创建一个服务端</p>
+<h2 id="初始化一个项目"><a href="#初始化一个项目" class="headerlink" title="初始化一个项目"></a>初始化一个项目</h2><p>新建一个graphql_express文件夹</p>
+<blockquote>
+<p>npm init –y</p>
+</blockquote>
+<p>安装依赖包</p>
+<blockquote>
+<p>npm install –save -D express express-graphql graphql</p>
+</blockquote>
+<p>一个简单的示例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>).graphqlHTTP;;</span><br><span class="line"><span class="keyword">var</span> &#123; buildSchema &#125; = <span class="built_in">require</span>(<span class="string">'graphql'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> schema = buildSchema(<span class="string">`</span></span><br><span class="line"><span class="string">  type Query &#123;</span></span><br><span class="line"><span class="string">    hello: String</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> root = &#123;</span><br><span class="line">    hello: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'Hello world!'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">    schema: schema,</span><br><span class="line">    rootValue: root,</span><br><span class="line">    graphiql: <span class="literal">true</span>,</span><br><span class="line">&#125;));</span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; <span class="built_in">console</span>.log(<span class="string">'Now browse to localhost:4000/graphql'</span>));</span><br></pre></td></tr></table></figure>
+
+<p>打开<a href="http://localhost:3000/graphql" target="_blank" rel="noopener">http://localhost:3000/graphql</a></p>
+<p>查询处输入</p>
+<blockquote>
+<p>query{hello}</p>
+</blockquote>
+<p><img src="./01.png" alt="初始化一个项目"></p>
+<h2 id="多个条件"><a href="#多个条件" class="headerlink" title="多个条件"></a>多个条件</h2><ul>
+<li>在root中添加新的数据</li>
+<li>root中添加renturn的返回值</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>).graphqlHTTP;;</span><br><span class="line"><span class="keyword">var</span> &#123; buildSchema &#125; = <span class="built_in">require</span>(<span class="string">'graphql'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> schema = buildSchema(<span class="string">`</span></span><br><span class="line"><span class="string">  type Query &#123;</span></span><br><span class="line"><span class="string">    hello: String</span></span><br><span class="line"><span class="string">    accountNam: String</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> root = &#123;</span><br><span class="line">    hello: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'Hello world!'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    accountNam:<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"linjiad"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">    schema: schema,</span><br><span class="line">    rootValue: root,</span><br><span class="line">    graphiql: <span class="literal">true</span>,</span><br><span class="line">&#125;));</span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; <span class="built_in">console</span>.log(<span class="string">'Now browse to localhost:4000/graphql'</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义类型"><a href="#自定义类型" class="headerlink" title="自定义类型"></a>自定义类型</h2><ul>
+<li>myType是我们自定义的类型<ul>
+<li>用type定义类型</li>
+<li>把myType放到Query（account）</li>
+<li>account定义到root中</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>).graphqlHTTP;;</span><br><span class="line"><span class="keyword">var</span> &#123; buildSchema &#125; = <span class="built_in">require</span>(<span class="string">'graphql'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> schema = buildSchema(<span class="string">`</span></span><br><span class="line"><span class="string">  type myType &#123;</span></span><br><span class="line"><span class="string">    name: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    sex: String</span></span><br><span class="line"><span class="string">    department: String</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Query &#123;</span></span><br><span class="line"><span class="string">    hello: String</span></span><br><span class="line"><span class="string">    accountNam: String</span></span><br><span class="line"><span class="string">    account: myType</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> root = &#123;</span><br><span class="line">    hello: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'Hello world!'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    accountNam:<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"linjiad"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    account:<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            name:<span class="string">"linjiad"</span>,</span><br><span class="line">            age:<span class="number">18</span>,</span><br><span class="line">            sex:<span class="string">"男"</span>,</span><br><span class="line">            department:<span class="string">"科学院"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">    schema: schema,</span><br><span class="line">    rootValue: root,</span><br><span class="line">    graphiql: <span class="literal">true</span>,</span><br><span class="line">&#125;));</span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; <span class="built_in">console</span>.log(<span class="string">'Now browse to localhost:3000/graphql'</span>));</span><br></pre></td></tr></table></figure>
+
+<p>这时候可以访问特定字段</p>
+<blockquote>
+<p>query{<br>    account {<br>      name<br>      age<br>    }<br>  }</p>
+</blockquote>
+<p><img src="./02.png" alt="自定义类型"></p>
+<h2 id="查询条件"><a href="#查询条件" class="headerlink" title="查询条件"></a>查询条件</h2><p>根据查询条件查询</p>
+<ul>
+<li>getClassMates(classNo: Int!):[String]<ul>
+<li>定义查询方法</li>
+<li>括号内定义参数和参数类型</li>
+</ul>
+</li>
+<li>getClassMates({classNo}){})<ul>
+<li>方法的返回值</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ————————————————————————————查询条件————————————————————————</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>).graphqlHTTP;;</span><br><span class="line"><span class="keyword">var</span> &#123; buildSchema &#125; = <span class="built_in">require</span>(<span class="string">'graphql'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// getClassMates(classNo:31)就是查询</span></span><br><span class="line"><span class="keyword">var</span> schema = buildSchema(<span class="string">`</span></span><br><span class="line"><span class="string">  type Query &#123;</span></span><br><span class="line"><span class="string">    getClassMates(classNo: Int!):[String]</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> root = &#123;</span><br><span class="line">    <span class="comment">// 处理getClassMates()查询返回值</span></span><br><span class="line">    getClassMates(&#123;classNo&#125;)&#123;</span><br><span class="line">        <span class="keyword">const</span> obj = &#123;</span><br><span class="line">            <span class="number">31</span>:[<span class="string">"张三"</span>,<span class="string">"李四"</span>,<span class="string">"王五"</span>],</span><br><span class="line">            <span class="number">62</span>:[<span class="string">"张三大"</span>,<span class="string">"李四大"</span>,<span class="string">"王五大"</span>]</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> obj[classNo];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">    schema: schema,</span><br><span class="line">    rootValue: root,</span><br><span class="line">    graphiql: <span class="literal">true</span>,</span><br><span class="line">&#125;));</span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; <span class="built_in">console</span>.log(<span class="string">'Now browse to localhost:3000/graphql'</span>));</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>query{<br>    getClassMates(classNo:31)<br>  }</p>
+</blockquote>
+<p><img src="./03.png" alt="查询条件"></p>
+<h2 id="查询条件包含查询条件"><a href="#查询条件包含查询条件" class="headerlink" title="查询条件包含查询条件"></a>查询条件包含查询条件</h2><p>根据查询条件查询</p>
+<ul>
+<li>定义查询类型Account</li>
+<li>account(username:String):Account<ul>
+<li>定义查询方法</li>
+<li>括号内定义参数和参数类型</li>
+<li>返回类型</li>
+</ul>
+</li>
+<li>account({username})<ul>
+<li>方法的返回值</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ————————————————————————————查询条件————————————————————————</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>).graphqlHTTP;;</span><br><span class="line"><span class="keyword">var</span> &#123; buildSchema &#125; = <span class="built_in">require</span>(<span class="string">'graphql'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// getClassMates(classNo:31)就是查询</span></span><br><span class="line"><span class="keyword">var</span> schema = buildSchema(<span class="string">`</span></span><br><span class="line"><span class="string">  type Account &#123;</span></span><br><span class="line"><span class="string">    name: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    sex: String</span></span><br><span class="line"><span class="string">    department: String</span></span><br><span class="line"><span class="string">    salary(city:String):Int</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Query &#123;</span></span><br><span class="line"><span class="string">    getClassMates(classNo: Int!):[String]</span></span><br><span class="line"><span class="string">    account(username:String):Account</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> root = &#123;</span><br><span class="line">    <span class="comment">// 处理getClassMates()查询返回值</span></span><br><span class="line">    getClassMates(&#123;classNo&#125;)&#123;</span><br><span class="line">        <span class="keyword">const</span> obj = &#123;</span><br><span class="line">            <span class="number">31</span>:[<span class="string">"张三"</span>,<span class="string">"李四"</span>,<span class="string">"王五"</span>],</span><br><span class="line">            <span class="number">62</span>:[<span class="string">"张三大"</span>,<span class="string">"李四大"</span>,<span class="string">"王五大"</span>]</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> obj[classNo];</span><br><span class="line">    &#125;,</span><br><span class="line">    account(&#123;username&#125;)&#123;</span><br><span class="line">        <span class="keyword">const</span> name = username;</span><br><span class="line">        <span class="keyword">const</span> sex = <span class="string">"man"</span>;</span><br><span class="line">        <span class="keyword">const</span> age = <span class="number">18</span>;</span><br><span class="line">        <span class="keyword">const</span> department = <span class="string">"开发部"</span>;</span><br><span class="line">        <span class="keyword">const</span> salary = <span class="function">(<span class="params">&#123;city&#125;</span>) =&gt;</span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(city === <span class="string">"北京"</span> || city=== <span class="string">"上海"</span> || city ===<span class="string">"广州"</span> || city===<span class="string">"深圳"</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">10000</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">3000</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>&#123;</span><br><span class="line">            name,</span><br><span class="line">            sex,</span><br><span class="line">            age,</span><br><span class="line">            department,</span><br><span class="line">            salary</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">    schema: schema,</span><br><span class="line">    rootValue: root,</span><br><span class="line">    graphiql: <span class="literal">true</span>,</span><br><span class="line">&#125;));</span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; <span class="built_in">console</span>.log(<span class="string">'Now browse to localhost:3000/graphql'</span>));</span><br></pre></td></tr></table></figure>
+
+<p><img src="./04.png" alt="查询条件"></p>
+<blockquote>
+<p>query{<br>    account(username:”张三”){<br>      name<br>      sex<br>      age<br>      salary(city:”南京”)<br>    }<br>  }</p>
+</blockquote>
+<h2 id="客户端访问"><a href="#客户端访问" class="headerlink" title="客户端访问"></a>客户端访问</h2><ul>
+<li>首先创建一个public空文件夹</li>
+<li>之后配置让node能返回这个静态文件<ul>
+<li>app.use(express.static(“public”))</li>
+</ul>
+</li>
+<li>再public下创建index.html</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"getData()"</span>&gt;</span>获取数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">getData</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">const</span> query = `</span></span><br><span class="line"><span class="javascript">         query Account($username:<span class="built_in">String</span>)&#123;</span></span><br><span class="line">            account(username:$username)&#123;</span><br><span class="line">                name</span><br><span class="line">                age</span><br><span class="line">                sex</span><br><span class="line"><span class="actionscript">                salary(city:<span class="string">"北京"</span>)</span></span><br><span class="line">            &#125;</span><br><span class="line">         &#125;</span><br><span class="line">        `</span><br><span class="line"><span class="actionscript">        <span class="keyword">const</span> variables = &#123;username:<span class="string">"李四大"</span>&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">        fetch(<span class="string">"/graphql"</span>,&#123;</span></span><br><span class="line"><span class="actionscript">            method:<span class="string">"POST"</span>,</span></span><br><span class="line">            headers:&#123;</span><br><span class="line"><span class="actionscript">                <span class="string">'Content-Type'</span>:<span class="string">'application/json'</span>,</span></span><br><span class="line"><span class="actionscript">                <span class="string">'Accept'</span>:<span class="string">'application/json'</span></span></span><br><span class="line">            &#125;,</span><br><span class="line"><span class="javascript">            body:<span class="built_in">JSON</span>.stringify(&#123;</span></span><br><span class="line">                query:query,</span><br><span class="line">                variables:variables</span><br><span class="line">            &#125;)</span><br><span class="line"><span class="javascript">        &#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> res.json())</span></span><br><span class="line"><span class="javascript">        .then(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.dir(data);</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="把城市也变成参数"><a href="#把城市也变成参数" class="headerlink" title="把城市也变成参数"></a>把城市也变成参数</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"getData()"</span>&gt;</span>获取数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">getData</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="comment">// 把城市也拿出来当作参数</span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">const</span> query = `</span></span><br><span class="line"><span class="javascript">         query Account($username:<span class="built_in">String</span>,<span class="attr">$city</span>:<span class="built_in">String</span>)&#123;</span></span><br><span class="line">            account(username:$username)&#123;</span><br><span class="line">                name</span><br><span class="line">                age</span><br><span class="line">                sex</span><br><span class="line">                salary(city:$city)</span><br><span class="line">            &#125;</span><br><span class="line">         &#125;</span><br><span class="line">        `</span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="keyword">const</span> variables = &#123;username:<span class="string">"李四大"</span>,city:<span class="string">"重庆"</span>&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">        fetch(<span class="string">"/graphql"</span>,&#123;</span></span><br><span class="line"><span class="actionscript">            method:<span class="string">"POST"</span>,</span></span><br><span class="line">            headers:&#123;</span><br><span class="line"><span class="actionscript">                <span class="string">'Content-Type'</span>:<span class="string">'application/json'</span>,</span></span><br><span class="line"><span class="actionscript">                <span class="string">'Accept'</span>:<span class="string">'application/json'</span></span></span><br><span class="line">            &#125;,</span><br><span class="line"><span class="javascript">            body:<span class="built_in">JSON</span>.stringify(&#123;</span></span><br><span class="line">                query:query,</span><br><span class="line">                variables:variables</span><br><span class="line">            &#125;)</span><br><span class="line"><span class="javascript">        &#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> res.json())</span></span><br><span class="line"><span class="javascript">        .then(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.dir(data);</span></span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用Mutations修改数据"><a href="#使用Mutations修改数据" class="headerlink" title="使用Mutations修改数据"></a>使用Mutations修改数据</h2><ul>
+<li>新建一个增加类——————input AccountInput</li>
+<li>定义新增方法——————createAccount(input:AccountInput):Account</li>
+<li>实现新增方法——————createAccount({input})</li>
+<li>GraphiQL中必须含有查询类type Query，否则会报错</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ————————————————————————————页面查询————————————————————————</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>).graphqlHTTP;;</span><br><span class="line"><span class="keyword">var</span> &#123; buildSchema &#125; = <span class="built_in">require</span>(<span class="string">'graphql'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// getClassMates(classNo:31)就是查询</span></span><br><span class="line"><span class="keyword">var</span> schema = buildSchema(<span class="string">`</span></span><br><span class="line"><span class="string">  input AccountInput&#123;</span></span><br><span class="line"><span class="string">    id: String</span></span><br><span class="line"><span class="string">    name: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    sex: String</span></span><br><span class="line"><span class="string">    department: String</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Account &#123;</span></span><br><span class="line"><span class="string">    id: String</span></span><br><span class="line"><span class="string">    name: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    sex: String</span></span><br><span class="line"><span class="string">    department: String</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Mutation&#123;</span></span><br><span class="line"><span class="string">    createAccount(input:AccountInput):Account</span></span><br><span class="line"><span class="string">    updateAccount(id:ID!,input:AccountInput):Account</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Query &#123;</span></span><br><span class="line"><span class="string">    account:[Account]</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fakeDb = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> root = &#123;</span><br><span class="line">    <span class="comment">// 处理getClassMates()查询返回值</span></span><br><span class="line">    account()&#123;</span><br><span class="line">        <span class="keyword">var</span> arr = [];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> fakeDb)&#123;</span><br><span class="line">            arr.push(fakeDb[key])</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 新增</span></span><br><span class="line">    createAccount(&#123;input&#125;)&#123;</span><br><span class="line">        <span class="comment">// 相当于数据库保存</span></span><br><span class="line">        fakeDb[input.name] = input;</span><br><span class="line">        <span class="comment">// 返回保存结果</span></span><br><span class="line">        <span class="keyword">return</span> fakeDb[input.name]</span><br><span class="line">    &#125;,</span><br><span class="line">    updateAccount(&#123;id,input&#125;)&#123;</span><br><span class="line">        <span class="comment">// 相当于数据库更新</span></span><br><span class="line">        <span class="keyword">const</span> updateAccount = <span class="built_in">Object</span>.assign(&#123;&#125;,fakeDb[id],input);</span><br><span class="line">        fakeDb[id] = updateAccount;</span><br><span class="line">        <span class="keyword">return</span> updateAccount</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">    schema: schema,</span><br><span class="line">    rootValue: root,</span><br><span class="line">    graphiql: <span class="literal">true</span>,</span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 公开文件夹，供用户访问静态文件</span></span><br><span class="line">app.use(express.static(<span class="string">"public"</span>))</span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; <span class="built_in">console</span>.log(<span class="string">'Now browse to localhost:3000/graphql'</span>));</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>mutation{<br>    createAccount(input:{<br>      id:”2”,<br>      name:”linjiad2”,<br>      age:18,<br>      sex:”男”,<br>      department:”程序员”<br>    }){<br>      name<br>    }<br>  }<br>  mutation{<br>    updateAccount(id:”1”,input:{<br>      age:19<br>    }){<br>      age<br>    }<br>  }<br>  query{<br>    account{<br>      name<br>      age<br>      sex<br>      department<br>    }<br>  }</p>
+</blockquote>
+<p><img src="./05.png" alt="查询条件"></p>
+<h2 id="添加中间件访问安全"><a href="#添加中间件访问安全" class="headerlink" title="添加中间件访问安全"></a>添加中间件访问安全</h2><p>给服务添加拦截器</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义中间件拦截</span></span><br><span class="line"><span class="keyword">const</span> middleware = <span class="function">(<span class="params">req,res,next</span>) =&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(req.url.indexOf(<span class="string">"/graphql"</span>) !== <span class="number">-1</span> &amp;&amp; req.headers.cookie.indexOf(<span class="string">"auth"</span>) === <span class="number">-1</span>)&#123;</span><br><span class="line">        res.send(<span class="built_in">JSON</span>.stringify(&#123;</span><br><span class="line">            error:<span class="string">"您没有访问这个接口得权限"</span></span><br><span class="line">        &#125;));</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    next();</span><br><span class="line">&#125;</span><br><span class="line">app.use(middleware);</span><br></pre></td></tr></table></figure>
+
+<p>整体代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ————————————————————————————中间件拦截————————————————————————</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>).graphqlHTTP;;</span><br><span class="line"><span class="keyword">var</span> &#123; buildSchema &#125; = <span class="built_in">require</span>(<span class="string">'graphql'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// getClassMates(classNo:31)就是查询</span></span><br><span class="line"><span class="keyword">var</span> schema = buildSchema(<span class="string">`</span></span><br><span class="line"><span class="string">  input AccountInput&#123;</span></span><br><span class="line"><span class="string">    id: String</span></span><br><span class="line"><span class="string">    name: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    sex: String</span></span><br><span class="line"><span class="string">    department: String</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Account &#123;</span></span><br><span class="line"><span class="string">    id: String</span></span><br><span class="line"><span class="string">    name: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    sex: String</span></span><br><span class="line"><span class="string">    department: String</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Mutation&#123;</span></span><br><span class="line"><span class="string">    createAccount(input:AccountInput):Account</span></span><br><span class="line"><span class="string">    updateAccount(id:ID!,input:AccountInput):Account</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Query &#123;</span></span><br><span class="line"><span class="string">    account:[Account]</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fakeDb = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> root = &#123;</span><br><span class="line">    <span class="comment">// 处理getClassMates()查询返回值</span></span><br><span class="line">    account()&#123;</span><br><span class="line">        <span class="keyword">var</span> arr = [];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> fakeDb)&#123;</span><br><span class="line">            arr.push(fakeDb[key])</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// 新增</span></span><br><span class="line">    createAccount(&#123;input&#125;)&#123;</span><br><span class="line">        <span class="comment">// 相当于数据库保存</span></span><br><span class="line">        fakeDb[input.name] = input;</span><br><span class="line">        <span class="comment">// 返回保存结果</span></span><br><span class="line">        <span class="keyword">return</span> fakeDb[input.name]</span><br><span class="line">    &#125;,</span><br><span class="line">    updateAccount(&#123;id,input&#125;)&#123;</span><br><span class="line">        <span class="comment">// 相当于数据库更新</span></span><br><span class="line">        <span class="keyword">const</span> updateAccount = <span class="built_in">Object</span>.assign(&#123;&#125;,fakeDb[id],input);</span><br><span class="line">        fakeDb[id] = updateAccount;</span><br><span class="line">        <span class="keyword">return</span> updateAccount</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义中间件拦截</span></span><br><span class="line"><span class="keyword">const</span> middleware = <span class="function">(<span class="params">req,res,next</span>) =&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(req.url.indexOf(<span class="string">"/graphql"</span>) !== <span class="number">-1</span> &amp;&amp; req.headers.cookie.indexOf(<span class="string">"auth"</span>) === <span class="number">-1</span>)&#123;</span><br><span class="line">        res.send(<span class="built_in">JSON</span>.stringify(&#123;</span><br><span class="line">            error:<span class="string">"您没有访问这个接口得权限"</span></span><br><span class="line">        &#125;));</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    next();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.use(middleware);</span><br><span class="line"></span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">    schema: schema,</span><br><span class="line">    rootValue: root,</span><br><span class="line">    graphiql: <span class="literal">true</span>,</span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 公开文件夹，供用户访问静态文件</span></span><br><span class="line">app.use(express.static(<span class="string">"public"</span>))</span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; <span class="built_in">console</span>.log(<span class="string">'Now browse to localhost:3000/graphql'</span>));</span><br></pre></td></tr></table></figure>
+
+<p><img src="./06.png" alt="查询条件"></p>
+<h2 id="使用GraphQLObjectType定义Type"><a href="#使用GraphQLObjectType定义Type" class="headerlink" title="使用GraphQLObjectType定义Type"></a>使用GraphQLObjectType定义Type</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ————————————————————————————GraphQLObjectType实现————————————————————————</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>).graphqlHTTP;;</span><br><span class="line"><span class="keyword">var</span> graphql = <span class="built_in">require</span>(<span class="string">'graphql'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> AccountType = <span class="keyword">new</span> graphql.GraphQLObjectType(&#123;</span><br><span class="line">    name: <span class="string">"account"</span>,</span><br><span class="line">    description:<span class="string">"人物描述"</span>,</span><br><span class="line">    fields:&#123;</span><br><span class="line">        name:&#123;<span class="attr">type</span>:graphql.GraphQLString,<span class="attr">description</span>:<span class="string">"姓名"</span>&#125;,</span><br><span class="line">        age:&#123;<span class="attr">type</span>:graphql.GraphQLInt,<span class="attr">description</span>:<span class="string">"年龄"</span>&#125;,</span><br><span class="line">        sex:&#123;<span class="attr">type</span>:graphql.GraphQLString,<span class="attr">description</span>:<span class="string">"性别"</span>&#125;,</span><br><span class="line">        department:&#123;<span class="attr">type</span>:graphql.GraphQLString,<span class="attr">description</span>:<span class="string">"部门"</span>&#125;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> queryType = <span class="keyword">new</span> graphql.GraphQLObjectType(&#123;</span><br><span class="line">    name: <span class="string">'Query'</span>,</span><br><span class="line">    description: <span class="string">'查询'</span>,</span><br><span class="line">    fields: &#123;</span><br><span class="line">        account: &#123;</span><br><span class="line">            name: <span class="string">'personQuery'</span>,</span><br><span class="line">            description: <span class="string">'查个人'</span>,</span><br><span class="line">            type: AccountType,</span><br><span class="line">            args: &#123;</span><br><span class="line">                username:&#123;<span class="attr">type</span>:graphql.GraphQLString,<span class="attr">description</span>:<span class="string">"人物姓名"</span>&#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            resolve:<span class="function"><span class="keyword">function</span> (<span class="params">_,&#123;username&#125;</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">const</span> name = username;</span><br><span class="line">                <span class="keyword">const</span> sex = <span class="string">"man"</span>;</span><br><span class="line">                <span class="keyword">const</span> age = <span class="number">18</span>;</span><br><span class="line">                <span class="keyword">const</span> department = <span class="string">"程序员"</span>;</span><br><span class="line">                <span class="keyword">return</span> &#123;</span><br><span class="line">                    name,</span><br><span class="line">                    sex,</span><br><span class="line">                    age,</span><br><span class="line">                    department</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> schema2 = <span class="keyword">new</span> graphql.GraphQLSchema(&#123;<span class="attr">query</span>: queryType&#125;);</span><br><span class="line"><span class="keyword">var</span> app = express();</span><br><span class="line"></span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">    schema: schema2,</span><br><span class="line">    graphiql: <span class="literal">true</span>,</span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, () =&gt; <span class="built_in">console</span>.log(<span class="string">'Now browse to localhost:3000/graphql'</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="结合mysql"><a href="#结合mysql" class="headerlink" title="结合mysql"></a>结合mysql</h2><h3 id="连接mysql"><a href="#连接mysql" class="headerlink" title="连接mysql"></a>连接mysql</h3><ul>
+<li>创建mysql数据库和表<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> <span class="keyword">account</span></span><br><span class="line">(</span><br><span class="line">	<span class="keyword">id</span> <span class="built_in">int</span> auto_increment,</span><br><span class="line">	<span class="keyword">name</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="literal">null</span>,</span><br><span class="line">	age <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="literal">null</span>,</span><br><span class="line">	sex <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="literal">null</span>,</span><br><span class="line">	department <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="literal">null</span>,</span><br><span class="line">	<span class="keyword">constraint</span> account_pk</span><br><span class="line">		primary <span class="keyword">key</span> (<span class="keyword">id</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<img src="./07.png" alt="查询条件"></li>
+<li>安装mysql包<ul>
+<li>npm install mysql -s</li>
+<li><a href="https://www.npmjs.com/package/mysql" target="_blank" rel="noopener">https://www.npmjs.com/package/mysql</a></li>
+</ul>
+</li>
+<li>配置数据库连接<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mysql      = <span class="built_in">require</span>(<span class="string">'mysql'</span>);</span><br><span class="line"><span class="keyword">var</span> pool = mysql.createConnection(&#123;</span><br><span class="line">    connectionLimit: <span class="number">10</span>,</span><br><span class="line">    host     : <span class="string">'localhost'</span>,</span><br><span class="line">    user     : <span class="string">'root'</span>,</span><br><span class="line">    password : <span class="string">'jkp66902'</span>,</span><br><span class="line">    database : <span class="string">'graphql'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>这里有个坑需要修改身份认证方式否则连接不上<ul>
+<li>ALTER USER ‘root’@’localhost’ IDENTIFIED WITH mysql_native_password BY ‘jkp66902’;</li>
+</ul>
+</li>
+</ul>
+<p><img src="./08.png" alt="查询条件"><br><img src="./09.png" alt="查询条件"></p>
+<h3 id="创建数据"><a href="#创建数据" class="headerlink" title="创建数据"></a>创建数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">createAccount(&#123;input&#125;) &#123;</span><br><span class="line">    <span class="keyword">const</span> data = &#123;</span><br><span class="line">        name:input.name,</span><br><span class="line">        sex:input.sex,</span><br><span class="line">        age:input.age,</span><br><span class="line">        department:input.department</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">        pool.query(<span class="string">`insert into account set ?`</span>,data,(err) =&gt; &#123;</span><br><span class="line">            <span class="keyword">if</span>(err)&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">"出错了"</span>+err.message);</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            resolve(data);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>mutation{<br>    createAccount(input:{<br>      name:”linjiad”,<br>      age:18,<br>      sex:”男”,<br>      department:”程序员”<br>    }){<br>      name<br>    }<br>  }</p>
+</blockquote>
+<p><img src="./10.png" alt="查询条件"><br><img src="./11.png" alt="查询条件"></p>
+<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">account() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">            pool.query(<span class="string">`select name,age,sex,department from account`</span>,(err,results) =&gt; &#123;</span><br><span class="line">                <span class="keyword">if</span>(err)&#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(<span class="string">"出错了"</span>+err.message);</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">const</span> arr = [];</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;results.length;i++)&#123;</span><br><span class="line">                    arr.push(&#123;</span><br><span class="line">                        name:results[i].name,</span><br><span class="line">                        sex:results[i].sex,</span><br><span class="line">                        age:results[i].age,</span><br><span class="line">                        department:results[i].department,</span><br><span class="line">                    &#125;)</span><br><span class="line">                &#125;</span><br><span class="line">                resolve(arr);</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>query{<br>    account{<br>      name<br>      age<br>      sex<br>      department<br>    }<br>  }</p>
+</blockquote>
+<p><img src="./12.png" alt="查询条件"></p>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">updateAccount(&#123;id, input&#125;) &#123;</span><br><span class="line">        <span class="keyword">const</span> data = input</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">            pool.query(<span class="string">`update account set ? where id = ?`</span>,[data , id],(err,results) =&gt; &#123;</span><br><span class="line">                <span class="keyword">if</span>(err)&#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(<span class="string">"出错了"</span>+err.message);</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                resolve(results.message);</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>mutation{<br>    updateAccount(id:2,input:{<br>      age:21<br>    })<br>  }</p>
+</blockquote>
+<p><img src="./13.png" alt="查询条件"><br><img src="./14.png" alt="查询条件"></p>
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">deleteAccount(&#123;id&#125;)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(id);</span><br><span class="line">            pool.query(<span class="string">`DELETE FROM account WHERE id = ?`</span>,[id],(err,results) =&gt; &#123;</span><br><span class="line">                <span class="keyword">if</span>(err)&#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(<span class="string">"出错了"</span>+err.message);</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                resolve(results.message);</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>mutation{<br>    deleteAccount(id:3)<br>  }</p>
+</blockquote>
+<p><img src="./15.png" alt="查询条件"></p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/09/08/02web/GraphQL/01%E5%AF%BC%E8%A8%80/">
+                01导言
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '9ceNtDWOHVM9wantJJvy3Q0O-gzGzoHsz',
+			appKey: 'vekoCr5mzH7YTECDph85znmQ',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2020-<span id="footerYear"></span> 
+	<a href="/">linjiad</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<!--<br>-->
+	<!--Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>-->
+	<!--by <a href="//github.com/wujun234" target="_blank">WuJun</a>-->
+	<!--Powered by <a href="//hexo.io" target="_blank">Hexo</a>-->
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
